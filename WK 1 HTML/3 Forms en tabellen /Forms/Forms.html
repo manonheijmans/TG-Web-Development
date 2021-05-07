@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form>
+        <h3>1. Text form</h3>
+        <label for="voornaam">Voornaam:</label>
+        <input type="text" id="voornaam" name="voornaam" placeholder="Voornaam"><br>
+        <label for="achternaam">Achternaam:</label>
+        <input type="text" id="achternaam" name="achternaam" placeholder="Achternaam">
+        <hr>
+
+        <h3>2. Radio button form</h3>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Man</label><br>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Vrouw</label><br>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Anders</label>
+
+        <h3>Checkbox form</h3>
+        <input type="checkbox" id="huisdier1" name="huisdier1" value="Kat">
+        <label for="huisdier1"> Ik heb een kat</label><br>
+        <input type="checkbox" id="huidsier2" name="huisdier2" value="Hond">
+        <label for="huisdier2"> Ik heb een hond</label><br>
+        <input type="checkbox" id="huisdier3" name="huisdier3" value="Parkiet">
+        <label for="huisdier3"> Ik heb een parkiet</label><br><br>
+
+
+        <h3>Password form</h3>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd">
+
+        <h3>Reset form</h3>
+        <input type="reset" value="Reset">
+
+        <h3>Submit form</h3>
+        <input type="submit" value="Submit">
+
+        <h3>Date form</h3>
+        <label for="verjaardag">Verjaardag:</label>
+        <input type="date" id="verjaardag" name="Verjaardag">
+
+        <h3>Search form</h3>
+        <label for="gsearch">Zoek via Google:</label>
+        <input type="search" id="gsearch" name="gsearch">
+
+        <h3>Time form</h3>
+        <label for="appt">Selecteer een tijd:</label>
+        <input type="time" id="appt" name="appt">
+
+        <h3>Hidden form</h3>
+        <input type="hidden" id="custId" name="custId" value="3487">
+        <br>
+
+        <h3>Email form</h3>
+
+        <label for="email">Emailadres:</label>
+        <input type="email" id="email" name="email">
+    </form>
+    <br>
+    <hr>
+
+    <h3>3. emailknop met button</h3>
+    <form action="/action_page.php">
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email">
+        <input type="submit">
+    </form>
+
+    <hr>
+    <h3>4. Gegroepeerd formulier</h3>
+    <form>
+        <fieldset>
+            <legend>Personalia:</legend>
+            <label for="voornaam">Voornaam</label>
+            <input type="text" id="voornaam" name="voornaam"><br><br>
+            <label for="achternaam">Achternaam:</label>
+            <input type="achternaam" id="achternaam" name="achternaam"><br><br>
+
+            <label for="verjaardag">Verjaardag:</label>
+            <input type="date" id="verjaardag" name="verjaardag"><br><br>
+
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">M</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">V</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">O</label>
+        </fieldset>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <hr>
+
+    <h3>5. Drop down list </h3>
+    <form>
+    <label for="huisdieren">Kies een dier:</label>
+
+    <select name="huisdieren" id="huisdieren">
+        <option value="kat">Kat</option>
+        <option value="hond">Hond</option>
+        <option value="parkiet">Parkiet</option>
+        <option value="geit">Geit</option>
+    </select>
+</form>
+
+    <hr>
+
+    <h3>7. Reserveringsformulier sport</h3>
+    <form action="/action_page.php">
+        <fieldset>
+            <legend>Reserveren:</legend>
+            <label for="voornaam">Voornaam</label>
+            <input type="text" id="voornaam" name="voornaam" required><br><br>
+            <label for="achternaam">Achternaam:</label>
+            <input type="achternaam" id="achternaam" name="achternaam" required><br><br>
+            <label for="email">Emailadres:</label>
+            <input type="email" id="email" name="email" required>
+
+            <p>Lidmaatschap</p>
+            <input type="radio" id="ja" name="lidmaatschap" value="ja">
+            <label for="ja">Ja</label>
+            <input type="radio" id="nee" name="lidmaatschap" value="nee">
+            <label for="nee">Nee</label><br><br>
+
+            <label for="datum">Tijdstip:</label>
+            <input type="date" id="datum" name="datum" required>
+            <input type="time" id="appt" name="appt" min="09:00" max="18:00" required><br><br>
+
+            <label for="sport">Welke sport:</label>
+            <select name="sport" id="sport">
+                <option value="tafeltennis">Tafeltennis</option>
+                <option value="badminton">Badminton</option>
+                <option value="squash">Squash</option>
+            </select><br><br>
+
+            <input type="checkbox" id="voorwaarden" name="voorwaarden" value="voorwaarden" required>
+            <label for="huisdier1"> Ik ga akkoord met de reserveringsvoorwaarden.</label><br>
+        </fieldset>
+        <input type="submit" value="Submit"></form>
+
+        <hr>
+        <h3>8. Reserveringsformulier boeken</h3>
+        <form>
+        <fieldset>
+            <legend>Reserveren:</legend>
+            <label for="voornaam">Voornaam</label>
+            <input type="text" id="voornaam" name="voornaam"><br><br>
+            <label for="achternaam">Achternaam:</label>
+            <input type="achternaam" id="achternaam" name="achternaam"><br><br>
+
+            <label for="telefoonnummer">Telefoonnummer:</label>
+            <input type="tel" id="phone" name="phone">
+            <label for="email">Emailadres:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="boekkeuze">Welk&#40;e&#41; boek&#40;en&#41; wilt u reserveren?</label><br>
+            <textarea placeholder="Auteur - titel"name="message" rows="5" cols="30"></textarea><br>
+
+            <label for="boeken">Aantal boeken:</label>
+            <select name="boeken" id="boeken">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select><br><br>
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
