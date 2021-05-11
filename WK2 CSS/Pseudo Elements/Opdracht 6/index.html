@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+       p{color: white;
+       padding-top:25px;}
+
+    
+
+    
+        .vorm{background-color: black;
+        display: inline-block;
+        position: relative;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin: 50px;
+        text-align: center;
+        }
+
+        .vorm::before {content:".";
+        position: absolute;
+        right: 75px;
+        top: 25px;
+        display: inline-block;
+        background-color: black;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        color: white;
+    
+        }
+
+        .vorm::after {content:".";
+        position: absolute;
+        left: 75px;
+        top: 25px;
+        display: inline-block;
+        background-color: black;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        color: white;
+        transform:rotate(180deg);
+      
+        }
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="vorm"><p>1</p></div>
+    <div class="vorm"><p>2</p></div>
+    <div class="vorm"><p>3</p></div>
+</div>
+
+</body>
+</html>

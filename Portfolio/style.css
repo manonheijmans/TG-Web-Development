@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'TTRoundsNeueLight';
+    src:url(font/TTRoundsNeue-Light.woff2) format('woff2'),
+        url(font/TTRoundsNeue-Light.woff) format('woff');
+        }
+
+    body {
+        font-family: 'TTRoundsNeueLight', Arial, sans-serif; 
+        margin: 0px; 
+        }
+
+  
+
+    nav{display: inline}
+
+    nav img{display: inline;
+        position: fixed;
+        padding-left: 10px;
+        width: 30px;
+        }
+
+    ul  {display: flex;
+        justify-content: center;
+        }
+
+    li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0px 30px 0px 30px;
+        display: inline;
+        }
+
+    li a{ text-decoration: none;
+        color: black;
+        font-size: 1.5rem;
+        }
+
+   
+
+    .intro{margin-top: 150px;
+        margin-left: 100px;
+        margin-right: 100px;
+        display: flex;
+        justify-content: space-between
+        }
+
+    .intro h1{font-size: 3em;
+        text-transform: uppercase;
+        color: #0118BF;
+        width: 600px;
+        margin-top: 200px;
+        }
+
+    .introImage{
+        position: relative;
+        }
+
+    .introImage img{width: 980px;
+        position: absolute;
+        top: 55%;
+        left: 0%;
+        transform: translate(-50%, -50%);             
+        }
+      
+    .yellowBlock {
+        background-color: #debc3b;
+        width: 675px;
+        height: 1020px;   
+        }
+    
+   
+   
+   
+    .projects{
+        background-color: #E6E4D3;
+        margin-top: -120px;
+        padding-bottom: 100px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+
+   }
+
+.projects h1{
+        display: block;
+        padding-top: 170px;
+        text-align: center;
+        font-size: 4rem;
+        width: 100%;
+        color: white}
+  
+.projectCards{
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.projectCard {
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+
+  }
+  
+  .projectCard img {
+    display: block;
+    width: 400px;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 300ms ease;
+  background-color: #0118BF;
+  }
+  
+  .projectCard:hover .overlay {
+        opacity: 0.8;
+      }
+  
+  
+.about{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.about h1{
+    display: block;
+    margin: 0;
+    padding-top: 80px;
+    text-align: center;
+    font-size: 4rem;
+    width: 100%;
+    color: #0118BF}
+
+
+.aboutText{
+    width: 80%;
+    padding-bottom: 80px;
+   
+}
+
+.aboutSkills{background-color: #0118BF;
+width: 100%;
+padding-top: 70px;
+padding-bottom: 70px;
+text-align: center; 
+}
