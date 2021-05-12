@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{width: 200px;
+        height: 200px;
+        border: solid black 10px;
+        position: relative;
+        margin:0;
+        }
+
+        .imageContainer{position: relative;
+        width: 300px;
+        height: 300px;
+        border: solid black 1px;
+        transition-property: transform 2s;}
+
+        .block{
+        background-color: cornflowerblue;
+        position: absolute;
+        opacity: 1;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        top:0px;
+        transition: transform 3s}
+
+        .overlay{
+        position: absolute;
+        opacity: 0.8;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        top:0px;
+        transition: background-color 2s}
+
+        .overlay:hover{
+            background-color: pink;
+        }
+
+        .container:hover .block{
+            transform: translate(60%, 60%) rotate(45deg) ;
+        }
+        
+    
+    </style>
+</head>
+<body>
+
+<h1>Opdracht 5</h1>
+    <div class="container">
+        <div class="imageContainer">
+            <img src="/images/mariopage/gif1.gif" alt="example">
+            <div class="overlay"></div>
+            <div class="block"></div>      
+        </div>
+    </div>
+    <br>
+    <a href="/index.html">Terug</a>
+</body>
+</html>
