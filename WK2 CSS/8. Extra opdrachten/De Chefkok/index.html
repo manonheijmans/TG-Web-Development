@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
     <title>Document</title>
 
     <style>
@@ -14,9 +15,6 @@
             margin: 0px;
             width: 100%;
         }
-
-
-
 
         ul {
             list-style-type: none;
@@ -37,17 +35,22 @@
             font-size: 1.5rem;
         }
 
+        header li a:hover {
+            color: rgb(97, 135, 216)
+        }
 
         .banner {
-            position: relative;
+            background-image: url(/images/dechefkok/Kopie\ van\ cooking.jpg);
+            background-size: cover;
+            background-position: 30%, 30%;
+            display: flex;
+            justify-content: flex-end;
         }
 
         .banner-content-wrapper {
             color: rgb(97, 135, 216);
             width: 400px;
-            position: absolute;
-            top: 40px;
-            right: 40px;
+            padding: 40px;
         }
 
         .banner button {
@@ -84,6 +87,9 @@
             text-align: center;
             font-size: 2.5rem;
             flex-basis: 100%;
+            padding: 10px;
+            margin-top: 30px;
+            margin-bottom: 5px;
         }
 
 
@@ -102,25 +108,26 @@
         footer {
             background-color: rgb(128, 179, 128);
             display: flex;
+            justify-content: space-evenly;
         }
 
         .popular-dish-card img {
-            width: 300px;
+            width: 100%;
         }
 
-        .popular-dish-card-title {
+        .card-title {
 
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
         }
 
-        .popular-dish-card-title p {
+        .card-title p {
             display: inline-block;
             height: 30px;
         }
 
-        .popular-dish-card-title p:first-child {
+        .card-title p:first-child {
             font-size: 1.5rem;
         }
 
@@ -139,27 +146,26 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-evenly;
-
+            align-items: flex-end;
         }
 
-
-
         .menu img {
-            width: 300px;
+            width: 20%;
+            height: 20%;
             margin-left: 5px;
-
         }
 
         .menu-cards-wrapper {
             display: flex;
             justify-content: space-around;
-            width: 900px;
+            width: 65%;
             flex-wrap: wrap;
-
         }
 
         .menu-card {
+            box-sizing: border-box;
             width: 300px;
+            padding: 5px;
         }
 
         footer {
@@ -185,34 +191,50 @@
             color: white
         }
 
+        footer nav,
+        .contact {
+            margin-bottom: 10px;
+        }
 
-        @media(max-width: 800px) {
+        footer i{padding: 20px 0px 0px 10px}
+
+
+        @media(max-width: 1000px) {
             .banner {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-
-            }
-
-            .banner img {
-                height: 400px;
-                object-fit: cover;
-                overflow: hidden;
-                
             }
 
             .banner-content-wrapper {
                 max-width: 200px;
                 text-align: center;
+                position: relative;
+            }
+
+            .menu-cards-wrapper {
+                width: 100%
+            }
+
+            .menu img {
+                display: none;
             }
         }
 
         @media(max-width: 450px) {
 
-            .popular-dish-card,
-            .popular-dish-card img,
             .menu-card {
                 width: 250px;
+            }
+
+            footer {
+                justify-content: center;
+                height: 100%;
+                text-align: center
+            }
+
+            .contact {
+                width: 300px;
             }
 
 
@@ -232,7 +254,6 @@
             </ul>
         </nav>
         <div class="banner" id=#home>
-            <img src="/images/dechefkok/Kopie van cooking.jpg" alt="banner-background">
             <div class="banner-content-wrapper">
                 <h1>Cooking</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie dolor tortor, sit amet
@@ -252,7 +273,7 @@
             <div class="popular-dish-cards-wrapper">
                 <div class="popular-dish-card">
                     <img src="/images/dechefkok/Kopie van dish1.jpg" alt="pasta-dish">
-                    <div class="popular-dish-card-title">
+                    <div class="card-title">
                         <p>Pasta</p>
                         <p>€8,99</p>
                     </div>
@@ -264,7 +285,7 @@
                 </div>
                 <div class="popular-dish-card">
                     <img src="/images/dechefkok/Kopie van dish1.jpg" alt="pasta-dish">
-                    <div class="popular-dish-card-title">
+                    <div class="card-title">
                         <p>Pasta</p>
                         <p>€8,99</p>
                     </div>
@@ -276,7 +297,7 @@
                 </div>
                 <div class="popular-dish-card">
                     <img src="/images/dechefkok/Kopie van dish1.jpg" alt="pasta-dish">
-                    <div class="popular-dish-card-title">
+                    <div class="card-title">
                         <p>Pasta</p>
                         <p>€8,99</p>
                     </div>
@@ -293,62 +314,98 @@
             <img src="/images/dechefkok/Kopie van chef1.jpg" alt="chef">
             <div class="menu-cards-wrapper">
                 <div class="menu-card">
-                    <p>Pasta €8,99</p>
+                    <div class="card-title">
+                        <p>Pasta</p>
+                        <p>€8,99</p>
+                    </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie dolor tortor, sit amet
                         eleifend ex volutpat vulputate.</p>
                 </div>
                 <div class="menu-card">
-                    <p>Pasta €8,99</p>
+                    <div class="card-title">
+                        <p>Pasta</p>
+                        <p>€8,99</p>
+                    </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie dolor tortor, sit amet
                         eleifend ex volutpat vulputate.</p>
                 </div>
                 <div class="menu-card">
-                    <p>Pasta €8,99</p>
+                    <div class="card-title">
+                        <p>Pasta</p>
+                        <p>€8,99</p>
+                    </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie dolor tortor, sit amet
                         eleifend ex volutpat vulputate.</p>
                 </div>
                 <div class="menu-card">
-                    <p>Pasta €8,99</p>
+                    <div class="card-title">
+                        <p>Pasta</p>
+                        <p>€8,99</p>
+                    </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie dolor tortor, sit amet
                         eleifend ex volutpat vulputate.</p>
                 </div>
                 <div class="menu-card">
-                    <p>Pasta €8,99</p>
+                    <div class="card-title">
+                        <p>Pasta</p>
+                        <p>€8,99</p>
+                    </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie dolor tortor, sit amet
                         eleifend ex volutpat vulputate.</p>
                 </div>
                 <div class="menu-card">
-                    <p>Pasta €8,99</p>
+                    <div class="card-title">
+                        <p>Pasta</p>
+                        <p>€8,99</p>
+                    </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie dolor tortor, sit amet
                         eleifend ex volutpat vulputate.</p>
                 </div>
                 <div class="menu-card">
-                    <p>Pasta €8,99</p>
+                    <div class="card-title">
+                        <p>Pasta</p>
+                        <p>€8,99</p>
+                    </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie dolor tortor, sit amet
                         eleifend ex volutpat vulputate.</p>
                 </div>
                 <div class="menu-card">
-                    <p>Pasta €8,99</p>
+                    <div class="card-title">
+                        <p>Pasta</p>
+                        <p>€8,99</p>
+                    </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie dolor tortor, sit amet
                         eleifend ex volutpat vulputate.</p>
                 </div>
                 <div class="menu-card">
-                    <p>Pasta €8,99</p>
+                    <div class="card-title">
+                        <p>Pasta</p>
+                        <p>€8,99</p>
+                    </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie dolor tortor, sit amet
                         eleifend ex volutpat vulputate.</p>
                 </div>
                 <div class="menu-card">
-                    <p>Pasta €8,99</p>
+                    <div class="card-title">
+                        <p>Pasta</p>
+                        <p>€8,99</p>
+                    </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie dolor tortor, sit amet
                         eleifend ex volutpat vulputate.</p>
                 </div>
                 <div class="menu-card">
-                    <p>Pasta €8,99</p>
+                    <div class="card-title">
+                        <p>Pasta</p>
+                        <p>€8,99</p>
+                    </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie dolor tortor, sit amet
                         eleifend ex volutpat vulputate.</p>
                 </div>
                 <div class="menu-card">
-                    <p>Pasta €8,99</p>
+                    <div class="card-title">
+                        <p>Pasta</p>
+                        <p>€8,99</p>
+                    </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas molestie dolor tortor, sit amet
                         eleifend ex volutpat vulputate.</p>
                 </div>
@@ -361,7 +418,9 @@
             <p>Osdorpplein 15</p>
             <p>1234AB Amsterdam</p>
             <p>Openingstijden: maandag t/m vrijdag 10:00 - 22:00</p>
-            <p>icons</p>
+            <a href="#"><i class="lni lni-instagram"></i></a>
+            <a href="#"><i class="lni lni-facebook-original"></i></a>
+            <a href="#"><i class="lni lni-twitter-filled"></i></a>
         </div>
         <nav>
             <h2>Navigation</h2>
