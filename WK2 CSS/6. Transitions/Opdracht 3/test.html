@@ -1,82 +1,40 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* The animation code */
-        @keyframes example {
-            0% {
-                transform: translateX(0px)
-            }
 
-            25% {
-                transform: translateX(400px);
-            }
-
-            40% {
-                transform: translateX(300px)
-            }
-
-            100% {
-                transform: translateX(900px)
-            }
-        }
-
-        @keyframes example2 {
-            0% {
-                transform: translateX(900px)
-            }
-
-            25% {
-                transform: translateX(400px)
-            }
-
-            40% {
-                transform: translateX(500px)
-            }
-
-            100% {
-                transform: translateX(0px)
-            }
-        }
+.box {display: relative;
+  width: 150px;
+  height: 150px;
+  margin-left: 5px;
+  background-color: red;
+  transition:transform 1s;
+  transition: margin-left 1s 1s;
+  
+}
 
 
 
+ 
 
-        div {
-            width: 100px;
-            height: 100px;
-            background-color: red;
-            animation-name: example2;
-            animation-duration: 4s
-        }
 
-        .section .div {
-            transition: anim 5s ease-out;
-        }
+body:hover .box {
+    transform: translateX(540px);
+    margin-left: 100px;
 
-        section {
-            width: 1000px;
-            height: 200px;
-            background-color: grey
-        }
 
-        section:hover div {
-            animation-name: example;
-            animation-duration: 4s;
-            animation-fill-mode: forwards;
+}
     </style>
 </head>
-<section>
-    <div></div>
-</section>
-
-
 <body>
 
-</body>
+    
+   
 
-</html> -->
+      <div class="box"></div>
+     
+</body>
+</html>
