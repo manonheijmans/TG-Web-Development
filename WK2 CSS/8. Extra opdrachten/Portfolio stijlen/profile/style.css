@@ -13,7 +13,7 @@ nav {
     background-color: #45519d;
     color: white;
     height: 100%;
-    width: 15%;
+    width: 200px;
     position: fixed;
     overflow: auto;
 }
@@ -26,7 +26,6 @@ nav h2 {
 
 ul {
     list-style-type: none;
-  
 }
 
 li a {
@@ -46,18 +45,16 @@ li a, li i {
 }
 
 main {
-    margin-left: 15%;
-    width: 85%;
+    margin-left: 200px;
+    width: fill;
     display: flex;
     justify-content: space-around;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 
 section {
     flex-basis: 500px;
     margin-top: 20px;
-
 }
 
 .profile {
@@ -66,7 +63,6 @@ section {
     align-items: center;
     text-align: center;
     flex-wrap: row;
-    padding-right: 10px;
 }
 
 img {
@@ -87,7 +83,8 @@ img {
 }
 
 .profile hr {
-    width: 90%
+    width: 85%;
+    margin-bottom: 10px;
 }
 
 .user {
@@ -123,6 +120,7 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     padding-right: 5%;
+    margin-bottom: 10px;
 }
 
 .personalia p {
@@ -174,6 +172,51 @@ img {
     flex-basis: 150px;
 }
 
-@media(orientation:portrait):{
 
+.languages i{color:#B8B7F9; padding: 2px;}
+
+table {margin: 10px 0px 10px 0px}
+
+td{padding-right: 40px;}
+
+@media screen and (max-width: 700px) {
+    nav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    nav h2 {
+        display: none;
+    }
+    nav hr {
+        display: none;
+    }
+
+    main {
+        margin-left: 0px;
+        width: 100%
+    }
+    section {
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+    .profile img:first-child {height: 300px;}
+}
+
+@media (orientation: portrait){
+    .personal-info h2, .profile img:first-child {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
 }
