@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/8. Extra opdrachten/Portfolio stijlen/profile/style.css" rel="stylesheet">
+    <link href="/WK2 CSS/8. Extra opdrachten/Portfolio stijlen/profile/style.css" rel="stylesheet">
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -13,21 +13,36 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="side-nav">
         <h2>Menu</h2>
         <hr>
         <ul>
             <li><a href="#"><i class="lni lni-blackboard"></i>Dashboard</a></li>
-            <li><a href="#"><i class="lni lni-user"></i>User profile</a></li>
-            <li><a href="#"><i class="lni lni-users"></i>Members</a></li>
+            <li><a href="/WK2 CSS/8. Extra opdrachten/Portfolio stijlen/profile/index.html" class="active"><i class="lni lni-user"></i>User profile</a></li>
+            <li><a href="/WK2 CSS/8. Extra opdrachten/Portfolio stijlen/members/index.html"><i class="lni lni-users"></i>Members</a></li>
             <li><a href="#"><i class="lni lni-briefcase"></i>Assignments</a></li>
             <li><a href="#"><i class="lni lni-notepad"></i>Blogs</a></li>
         </ul>
-
     </nav>
+
+    <nav class="top-nav">
+        <a href="javascript:void(0);" onclick="myFunction()">
+            <i class="lni lni-menu"></i></a>
+        <ul id="dropdown-menu">
+            <li><a href="#"><i class="lni lni-blackboard"></i>Dashboard</a></li>
+            <li><a href="/WK2 CSS/8. Extra opdrachten/Portfolio stijlen/profile/index.html" class="active"><i class="lni lni-user"></i>User profile</a></li>
+            <li><a href="/WK2 CSS/8. Extra opdrachten/Portfolio stijlen/members/index.html"><i
+                        class="lni lni-users"></i>Members</a></li>
+            <li><a href="#"><i class="lni lni-briefcase"></i>Assignments</a></li>
+            <li><a href="#"><i class="lni lni-notepad"></i>Blogs</a></li>
+        </ul>
+    </nav>
+
+
+
     <main>
-        <section class="profile">
-            <img src="/images/portfoliostijlen/headerprofile v2.png">
+        <section class="profile" id="profile">
+            <img src="/WK2 CSS/images/portfoliostijlen/headerprofile v3.png">
             <h1>John Doe</h1>
             <p class="user">@JohnDoe</p>
             <p class=profile-quote>"Being open minded on other solutions gains better results than using the first
@@ -38,7 +53,7 @@
                 <p><i class="lni lni-heart"></i>9999</p>
                 <p><i class="lni lni-thumbs-down"></i>0</p>
             </div>
-            <img src="/images/portfoliostijlen/softskills v2.png">
+            <img src="/WK2 CSS/images/portfoliostijlen/softskills v2.png">
         </section>
 
         <section class="personal-info">
@@ -62,42 +77,63 @@
                 </div>
             </div>
 
-            <div class=languages>
+            <div class="languages">
                 <h2>Languages</h2>
                 <table>
                     <tr>
                         <td>HTML</td>
-                        <td><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i></td>
+                        <td><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i></td>
                     </tr>
                     <tr>
                         <td>CSS</td>
-                        <td><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star"></i></td>
+                        <td><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star"></i></td>
                     </tr>
                     <tr>
                         <td>JavaScript</td>
-                        <td><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i></td>
+                        <td><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i></td>
                     </tr>
                     <tr>
                         <td>Java</td>
-                        <td><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i></td>
+                        <td><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i></td>
                     </tr>
                     <tr>
                         <td>Kotlin</td>
-                        <td></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star"></i></td>
+                        <td></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star"></i>
                     </tr>
                     <tr>
                         <td>Groovy</td>
-                        <td><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i class="lni lni-star"></i><i class="lni lni-star"></i></td>
+                        <td><i class="lni lni-star-filled"></i><i class="lni lni-star-filled"></i><i
+                                class="lni lni-star-filled"></i><i class="lni lni-star"></i><i class="lni lni-star"></i>
+                        </td>
                     </tr>
                 </table>
-            </div>
-            <div class="frameworks-and-tools">
-                <h2>Frameworks & Tools</h2>
-                <img src="/images/portfoliostijlen/wordcloud.png">
-            </div>
+                <div class="frameworks-and-tools">
+                    <h2>Frameworks & Tools</h2>
+                    <img src="/WK2 CSS/images/portfoliostijlen/wordcloud.png">
+                </div>
         </section>
     </main>
 
+    <script>
+        function myFunction() {
+            var x = document.getElementById("dropdown-menu");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
 </body>
 
 </html>
