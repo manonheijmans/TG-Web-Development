@@ -1,0 +1,20 @@
+$break-small:  450px;
+$break-large:  1200px;
+
+
+
+.mobile {
+  @media (max-width: $break-small) {
+    color: tomato;
+  }
+}
+
+.tablet {
+    @media  (max-width: $break-large) and (min-width: $break-small) {
+   color: tomato;
+}
+}
+
+.desktop{ 
+    @media (min-width: $break-large) {color: tomato;}
+}
