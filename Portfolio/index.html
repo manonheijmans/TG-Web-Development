@@ -3,13 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+
+
+
+    <title>Document</title>
 </head>
 
 <body>
-    <div class="navBar">
+    <header>
+       
+
         <nav>
             <img src="/Portfolio/images/MH.png" alt="logo">
             <ul>
@@ -17,74 +26,49 @@
                 <li><a href="news.asp">About</a></li>
                 <li><a href="contact.asp">Contact</a></li>
             </ul>
+            <div class="menu-icon toggle" onclick="toggle()">
+                <input class="menu-icon__checkbox" type="checkbox" />
+                <div>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </nav>
-    </div>
 
-    <main>
-        <section class="intro">
-            <h1>Dit wordt wellicht ooit een portfolio</h1>
-            <div class="introImage">
-                <div class="yellowBlock"></div>
-                <img src="/Portfolio/images/hardware.png" alt="hardware">
-            </div>
-        </section>
+        
 
-
-
-
-        <section class="projects">
-            <h1 id="projects">Projects</h1>
-            <div class="projectCards">
-                <div class="projectCard">
-                    <img src="/Portfolio/images/stockwebsiteblauw.png" alt="dummy">
-                    <div class="overlay"></div>
-                </div>
-                <div class="projectCard">
-                    <img src="/Portfolio/images/stockwebsiteblauw.png" alt="dummy">
-                    <div class="overlay"></div>
-                </div>
-                <div class="projectCard">
-                    <img src="/Portfolio/images/stockwebsiteblauw.png" alt="dummy">
-                    <div class="overlay"></div>
-                </div>
-                <div class="projectCard">
-                    <img src="/Portfolio/images/stockwebsiteblauw.png" alt="dummy">
-                    <div class="overlay"></div>
-                </div>
-                <div class="projectCard">
-                    <img src="/Portfolio/images/stockwebsiteblauw.png" alt="dummy">
-                    <div class="overlay"></div>
-                </div>
-                <div class="projectCard">
-                    <img src="/Portfolio/images/stockwebsiteblauw.png" alt="dummy">
-                    <div class="overlay"></div>
-                </div>
-            </div>
-            </div>
-        </section>
-        <section class="about">
-            <h1>About</h1>
-            <div class="aboutText">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dictum lorem nisi. Sed est dui,
-                semper non ligula ac, varius laoreet tellus. In a semper purus, in semper libero. Suspendisse rhoncus
-                sodales elit eu tincidunt. Nunc tortor velit, fringilla non vehicula vel, sodales vitae lectus. Aliquam
-                sit amet lectus et orci dapibus tincidunt ut id arcu. Vivamus suscipit vehicula tellus. Etiam euismod
-                arcu a hendrerit mollis. Pellentesque leo arcu, posuere sit amet aliquet eu, varius sit amet ligula.</p>
-            <p> Etiam pulvinar eleifend eros. Ut sit amet congue odio. Pellentesque in erat venenatis, ornare augue sed,
-                dignissim metus. In aliquam malesuada risus, eget lacinia dui tempor egestas. Sed interdum iaculis eros,
-                id vulputate est lacinia eu. Vivamus vestibulum tortor velit, sed gravida dolor finibus at. Donec et
-                magna non turpis semper gravida. Ut egestas a lectus vel cursus. Maecenas pretium condimentum efficitur.
-            </p>
+        <div id="curtain">
+            <span></span>
+            <ul class="menu-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
-
-            <div class="aboutSkills">
-                <img src="Portfolio/images/logos.png" alt="skills">
-            </div>
-
-        </section>
-
     
-    </main>
+
+    </header >
+
+  
+
+
+
+
+
+
+    <script type="text/javascript">
+        function toggle() {
+            var curtain = document.getElementById('curtain');
+            curtain.classList.toggle('active')
+        }
+    </script>
+
+
+
+
+
+
+
 
 </body>
 
