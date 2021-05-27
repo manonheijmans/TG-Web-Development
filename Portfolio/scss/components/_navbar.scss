@@ -47,6 +47,11 @@ nav {height: 75px;}
   font-size: 1.6rem;
 }
 
+.navbar-main-links a:hover{
+  border-bottom: black 3px solid;
+  color: black;
+}
+
 .navbar-icon-links {
 	position: absolute;
 	right: 75px;

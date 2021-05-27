@@ -154,7 +154,7 @@ h2 {
       align-self: end;
 }
 
-.banner-image-container img {
+.banner-carousel-container {
   position: relative;
   left: -10%;
   z-index: 2;
@@ -183,9 +183,10 @@ h2 {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   -webkit-column-gap: 10px;
           column-gap: 10px;
-  row-gap: 50px;
-  width: 90%;
+  row-gap: 80px;
+  width: 80vw;
   margin: 0 auto 0 auto;
+  padding-bottom: 100px;
 }
 
 .project-card {
@@ -219,7 +220,7 @@ h2 {
           transition-timing-function: ease-out;
 }
 
-.card2 {
+.projects-overlapping-cards-container {
   -ms-grid-column: 4;
       grid-column-start: 4;
   grid-column-end: 8;
@@ -228,36 +229,50 @@ h2 {
   z-index: 1;
 }
 
-.card2 .background {
+.card2 .background-block1 {
   background-color: #0118bf;
   position: absolute;
   width: 100%;
   height: 100%;
-  bottom: -40px;
+  bottom: 40px;
   right: -50px;
   z-index: -1;
 }
 
-.card3 {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 5;
-  -ms-grid-row: 4;
-      grid-row-start: 4;
-  position: relative;
-  top: -15%;
-  left: 20%;
-  z-index: 2;
+.card2 .background-block1 {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 
-.card3 .background {
+.card2 .background-block2 {
   background-color: #ebbd21;
   position: absolute;
-  width: 50%;
-  height: 100%;
-  top: -60px;
-  left: 50px;
+  width: 40%;
+  height: 20%;
+  right: 100%;
+  bottom: 0%;
   z-index: -1;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.project-card:hover .background-block1 {
+  width: 130%;
+}
+
+.project-card:hover .background-block2 {
+  width: 60%;
+}
+
+.card3 {
+  position: relative;
+  top: 0%;
+  left: -60%;
+  z-index: 2;
 }
 
 .overlay {
@@ -287,7 +302,6 @@ h2 {
 .slider {
   position: absolute;
   top: 0;
-  left: 100%;
   height: 100%;
   width: 0;
   background-color: white;
@@ -309,12 +323,24 @@ h2 {
   transform: translate(-50%, -50%);
 }
 
-.card1:hover .slider {
+.card1 .slider {
+  left: 100%;
+}
+
+.project-card:hover .slider {
   width: 400px;
 }
 
 .card1:hover .background {
   width: 120%;
+}
+
+.card2 .slider {
+  right: 100%;
+}
+
+.card3 .slider {
+  left: 100%;
 }
 
 .slider-accent {
@@ -457,6 +483,11 @@ nav {
 
 .navbar-main-links a {
   font-size: 1.6rem;
+}
+
+.navbar-main-links a:hover {
+  border-bottom: black 3px solid;
+  color: black;
 }
 
 .navbar-icon-links {

@@ -8,9 +8,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   column-gap: 10px;
-  row-gap: 50px;
-  width: 90%;
+  row-gap: 80px;
+  width: 80vw;
   margin: 0 auto 0 auto;
+  padding-bottom: 100px;
 }
 
 .project-card {
@@ -40,42 +41,63 @@
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
 }
-.card2 {
+.projects-overlapping-cards-container {
   grid-column-start: 4;
   grid-column-end: 8;
   grid-row-start: 3;
   z-index: 1;
 }
 
-.card2 .background {
+
+
+.card2 .background-block1 {
   background-color: $secondary-color;
   position: absolute;
   width: 100%;
   height: 100%;
-  bottom: -40px;
+  bottom: 40px;
   right: -50px;
   z-index: -1;
 }
 
+.card2 .background-block1{
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.card2 .background-block2{
+  background-color: $primary-color;
+  position: absolute;
+  width: 40%;
+  height: 20%;
+  right: 100%;
+  bottom: 0%;
+  z-index: -1;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.project-card:hover .background-block1 {
+  width: 130%;
+
+}
+.project-card:hover .background-block2 {
+  width: 60%;
+}
+
+  // flex stretch omhoog en position relative  proberen en breedte van de pagina's klopt ook niet meer. 
+
+
 .card3 {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 4;
   position: relative;
-  top: -15%;
-  left: 20%;
+  top: 0%;
+  left: -60%;
   z-index: 2;
 }
 
-.card3 .background {
-  background-color: $primary-color;
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  top: -60px;
-  left: 50px;
-  z-index: -1;
-}
+
+
+
 
 .overlay {
   position: absolute;
@@ -99,10 +121,13 @@
   opacity: 0;
 }
 
+
+// Sliders
+// -----------------------------------------------
+
 .slider {
   position: absolute;
   top: 0;
-  left: 100%;
   height: 100%;
   width: 0;
   background-color: white;
@@ -123,13 +148,23 @@
   transform: translate(-50%, -50%);
 }
 
-.card1:hover .slider {
+.card1 .slider{
+  left: 100%;
+}
+
+.project-card:hover .slider {
   width: 400px;
 }
 
 .card1:hover .background {
   width: 120%;
 }
+
+.card2 .slider {
+  right: 100%;
+}
+
+.card3 .slider {left: 100%;}
 
 .slider-accent{width: 1rem;
   height: 0px;
