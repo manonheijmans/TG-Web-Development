@@ -1,0 +1,30 @@
+.banner-grid-container {
+    width: 85%;
+    height: 90vh;
+    margin: 0 auto 0 auto;
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+
+.banner-text-container {position: relative;
+top: 25%;}
+
+.banner-image-container{position: relative;
+align-self: end;}
+
+.banner-image-container img {position: relative;
+left: -10%;
+z-index: 2;}
+
+.banner-image-background {position: absolute;
+top: -70%;
+left: 45%;
+width: 55%;
+height: 205%;
+background-color: $primary-color;
+z-index: 1;
+}
+
+
+
+

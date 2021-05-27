@@ -2,74 +2,127 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </script>
 
+  <link rel="stylesheet" href="css/main.css" />
 
-
-
-
-    <title>Document</title>
+  <title>Portfolio</title>
 </head>
 
 <body>
-    <header>
-       
+  <header>
+    <nav>
+      <div class="navbar-own-logo">
+        <img src="/images/navbar/MH.png" alt="logo">
+      </div>
+      <div class="navbar-hamburger-icon">
+        <img src="/images/navbar/menu-list-logo.png" alt="menu">
+      </div>
+      <ul class="navbar-icon-links">
+        <li><img src="/images/navbar/github-logo.png" alt="github"></li>
+        <li><img src="/images/navbar/linkedin-logo.png" alt="linkedin"></li>
+      </ul>
+      <ul class="navbar-main-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-        <nav>
-            <img src="/Portfolio/images/MH.png" alt="logo">
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="news.asp">About</a></li>
-                <li><a href="contact.asp">Contact</a></li>
-            </ul>
-            <div class="menu-icon toggle" onclick="toggle()">
-                <input class="menu-icon__checkbox" type="checkbox" />
-                <div>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </nav>
+    </nav>
+  </header>
 
-        
-
-        <div id="curtain">
-            <span></span>
-            <ul class="menu-list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+  <main>
+    <section id="home" class="banner-container">
+      <div class="banner-grid-container">
+        <div class="banner-text-container">
+          <h1>Manon Heijmans //</h1>
+          <h1>Web Developer</h1>
         </div>
-    
+        <div class="banner-image-container">
+          <div class="banner-image-background"></div>
+          <img src="/images/carousel/mockup1.png" alt="mockup">
+        </div>
+      </div>
+    </section>
 
-    </header >
-
-  
-
-
-
-
-
-
-    <script type="text/javascript">
-        function toggle() {
-            var curtain = document.getElementById('curtain');
-            curtain.classList.toggle('active')
-        }
-    </script>
+    <section id="projects" class="projects">
+      <div class=projects-grid-container>
+        <h2>Projects</h2>
 
 
+        <div class="project-card card1">
+          <div class="background"></div>
+          <img src="/images/dummy.png" alt="dummy">
+          <div class="overlay"></div>
+          <div class="slider">
+            <div class="slider-text">
+              <p>Project Titel</p>
+              <p>May 27, 2021</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore odio, placeat itaque natus facere
+                incidunt magnam cupiditate id assumenda cum nihil quam obcaecati fugit porro? A est fugiat facilis esse?
+              </p>
+            </div>
+            <div class="slider-accent"></div>
+          </div>
+        </div>
+
+
+        <div class="project-card card2">
+          <div class="background"></div>
+          <img src="/images/dummy.png" alt="dummy">
+          <div class="overlay"></div>
+        </div>
+        <div class="project-card card3">
+          <div class="background"></div>
+          <img src="/images/dummy.png" alt="dummy">
+          <div class="overlay"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-container">
+      <div class="about-information-container">
+        <h2>About</h2>
+        <div class="about-block-object-top"></div>
+        <div class="about-text-container">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui tenetur provident dolorem magnam quis ipsam
+            nesciunt exercitationem tempore impedit fugit rem modi porro, repudiandae, vel dolorum blanditiis? Cumque,
+            suscipit eveniet!
+            Quas libero modi quia repudiandae incidunt vel! Quae illum earum voluptate laudantium eius assumenda, omnis
+            unde voluptatum minus eligendi molestias, corporis fugit a iusto beatae esse ratione ad voluptas mollitia.
+            Nulla exercitationem quaerat minus reprehenderit beatae temporibus cumque, ipsam in. Atque impedit mollitia
+            doloremque vero reprehenderit nostrum est facilis perspiciatis optio sapiente inventore modi tenetur, quidem
+            repudiandae, excepturi illo voluptatibus.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolorem iure eveniet suscipit dolorum.
+            Quasi quibusdam reiciendis similique nemo distinctio sed quidem quam commodi dolor ipsam, atque quod illum
+            iure!
+            Corrupti non commodi quis porro distinctio ipsa sequi? Quos quia enim delectus quod voluptates asperiores
+            minus repellendus ex cupiditate, officiis eos molestias reiciendis expedita nihil mollitia esse atque magnam
+            minima.</p>
+        </div>
+        <div class="about-block-object-bottom"></div>
+      </div>
+      <div class="about-skills-container">
+        <div class="about-skills-icons-container">
+          <img src="/images/skills/html5-icon-filled.png" alt="html5 icon">
+          <img src="/images/skills/css3-icon-filled.png" alt="css3 icon">
+          <img src="/images/skills/sass-icon-filled.png" alt="sass icon">
+          <img src="/images/skills/javascript-icon.png" alt="javascript icon">
+          <img src="/images/skills/react-icon.png" alt="react icon">
+        </div>
+      </div>
+    </section>
+  </main>
 
 
 
 
 
-
+  </script>
 </body>
 
 </html>

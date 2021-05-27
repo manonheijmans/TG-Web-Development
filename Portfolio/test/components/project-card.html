@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .projects-grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .project-card {
+            position: relative;
+        }
+
+        .card1 {
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+
+        .card2 {
+            grid-column-start: 4;
+            grid-column-end: 8;
+            grid-row-start: 2;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0.3;
+            width: 100%;
+            background-color: blue;
+        }
+
+        .project-card img {
+            width: 100%;
+        }
+
+        .project-card:hover .overlay {
+            opacity: 0
+        }
+    </style>
+
+</head>
+
+
+<div class="projects-grid-container">
+    <div class="project-card card1">
+        <img src="/images/dummy.png">
+        <div class="overlay"></div>"
+    </div>
+    <div class="project-card card2">
+        <img src="/images/dummy.png">
+        <div class="overlay"></div>"
+    </div>
+</div>
+
+
+
+
+</body>
+
+</html>

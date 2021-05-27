@@ -1,12 +1,73 @@
 @font-face {
-    font-family: 'TTRoundsNeueLight';
-    src:url(font/TT-Rounds-Neue/TTRoundsNeue-Light.woff2) format('woff2'),
-        url(/portfolio/font/TT-Rounds-Neue/TTRoundsNeue-Light.woff) format('woff');
-        }
-        
+    font-family: "TTRoundsNeue-Light";
+    src: url(/font/TT-Rounds-Neue/TTRoundsNeue-Light.woff2) format("woff2"),
+        url(/font/TT-Rounds-Neue/TTRoundsNeue-Light.woff) format("woff");
+}
 
-    * {
-        font-family: 'TTRoundsNeueLight', Arial, sans-serif; 
-        }
+@font-face {
+    font-family: "TTRoundsNeue-Regular";
+    src: url(/font/TT-Rounds-Neue/TTRoundsNeue-Regular.woff2) format("woff2"),
+        url(/font/TT-Rounds-Neue/TTRoundsNeue-Regular.woff) format("woff");
+}
 
-        a{font-family: 'TTRoundsNeueLight', Arial, sans-serif;}
+@font-face {
+    font-family: "TTRoundsNeue-Regular";
+    src: url(/font/TT-Rounds-Neue/TTRoundsNeue-Regular.woff2) format("woff2"),
+        url(/font/TT-Rounds-Neue/TTRoundsNeue-Regular.woff) format("woff");
+}
+
+@font-face {
+    font-family: "TTRoundsNeue-Thin";
+    src: url(/font/TT-Rounds-Neue/TTRoundsNeue-Medium.woff2) format("woff2"),
+        url(/font/TT-Rounds-Neue/TTRoundsNeue-Medium.woff) format("woff");
+}
+
+@font-face {
+    font-family: "TTRoundsNeue-Thin";
+    src: url(/font/TT-Rounds-Neue/TTRoundsNeue-Thin.woff2) format("woff2"),
+        url(/font/TT-Rounds-Neue/TTRoundsNeue-Thin.woff) format("woff");
+}
+
+
+
+a {
+    font-family: "TTRoundsNeue-Light";
+}
+
+p{font-family: "TTRoundsNeue-Thin";
+    font-size: 1.2rem;
+    line-height: 1.5;}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "TTRoundsNeue-Regular", Arial, sans-serif;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2{font-size: 3rem;
+padding: 50px 0px 30px 0;
+text-align: center;}
+
+.banner-container {
+    h1 {
+        color: $secondary-color;
+        text-transform: uppercase;
+    }
+}
+
+.slider-text p:first-child{color: $secondary-color;
+font-family: "TTRoundsNeue-Regular";
+font-size: 1.4rem;}
+
+.slider-text p:nth-child(2){font-size: 1rem;
+padding-bottom: 1rem;}
+
+.about-container p {padding-bottom: 2rem;}
+

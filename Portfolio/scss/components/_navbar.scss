@@ -1,193 +1,81 @@
-//transforming hamburger icon
+nav {height: 75px;}
 
-.menu-icon {
-	transform: scale(1.5);
+
+.navbar-own-logo {
+  position: absolute;
+  height: 75px;
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
 }
 
-.menu-icon {
-	position: relative;
-	cursor: pointer;
+.navbar-own-logo img {height: 1.8rem}
 
-	.menu-icon__checkbox {
-		margin: 0px;
-		display: block;
-		width: 100%;
-		height: 1.2rem;
-		position: relative;
-		cursor: pointer;
-		z-index: 2;
-		position: absolute;
-		opacity: 0;
-		overflow: hidden;
-	}
-
-	div {
-		height: 100%;
-		position: absolute;
-		top: 25%;
-		height: 12px;
-	}
-
-	span {
-		position: absolute;
-		display: block;
-		width: 20px;
-		height: 1px;
-		background-color: var(--bar-bg, #000);
-		border-radius: 2px;
-		transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
-
-		&:first-of-type {
-			top: 0
-		}
-		&:last-of-type {
-			bottom: 0;
-		}
-	}
-	&.active,
-	.menu-icon__checkbox:checked + div {
-		span {
-			&:first-of-type {
-				transform: rotate(45deg);
-				top: 5px;
-				background-color: white;
-			}
-			&:last-of-type {
-				transform: rotate(-45deg);
-				bottom: 5px;
-				background-color: white;
-			}
-		}
-	}
-
-	&.active:hover span:first-of-type,
-	&.active:hover span:last-of-type,
-	&:hover .menu-icon__checkbox:checked + div span:first-of-type,
-	&:hover .menu-icon__checkbox:checked + div span:last-of-type {
-		width: 23px;
-	}
-
-	&:hover {
-		// no need hover effect on mobile.
-		@media (min-width: 800px) {
-			span:first-of-type {
-				width: 26px;
-			}
-
-			span:last-of-type {
-				width: 12px;
-			}
-		}
-	}
-}
-
-// curtain menu
-.toggle {
-	// // position: fixed;
-	bottom: 0px;
-	right: 20px;
-	width: 25px;
-	height: 1.2rem;
-	// background-position: 5px;
-	z-index: 1000;
-	cursor: pointer;
-	transition: 0.5s;
-}
-#curtain.active .toggle {
-	background-repeat: no-repeat;
-}
-
-#curtain {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+.navbar-flex-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-#curtain span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 200%;
+	width: 50%;
 	height: 100%;
-	display: block;
-	transform-origin: bottom left;
-	transition: 0.5s ease-in-out;
-	transform: rotate(-90deg);
-}
-#curtain span {
-	background: #0118bf;
-	transform: rotate(-90deg);
-	transition-delay: 0.2s;
+	margin: 0 auto 0 auto;
+	margin: 0 auto 0 auto;
+  }
+
+.navbar-main-links {
+  height: 100%;
+  width: 50%;
+  margin: 0 auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
 }
 
-#curtain.active span {
-	z-index: 1;
-	transition-delay: 0s;
+.navbar-main-links li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px 30px 0px 30px;
+  display: inline;
 }
 
-#curtain.active span {
-	transform: rotate(0deg);
+.navbar-main-links a {
+  font-size: 1.6rem;
 }
 
-.menu-list {
+.navbar-icon-links {
 	position: absolute;
-	z-index: 100;
-	transform: 0.5;
-	visibility: hidden;
-	opacity: 0;
-	transition-delay: 0s;
-}
-#curtain.active .menu-list {
-	visibility: visible;
-	opacity: 1;
-	transition-delay: 0.7s;
-}
-#curtain.active  .menu-list li {
-	list-style: none;
-	margin: 10px 0;
-
-	  a {
-		text-decoration: none;
-		color: #fff;
-		font-size: 8rem;
-		text-align: center;
-		display: block;
-	}
-}
-
-// nav styling
-
-nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 5px;
-	width: 100%;
+	right: 75px;
 	height: 75px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+ padding: 0 15;
 
-	img {
-		height: 1.2rem;
-		padding-left: 25px;
-	}
 
-	ul {
-		display: flex;
-		justify-content: center;
+}
 
-		li {
-			list-style-type: none;
-			margin: 0;
-			padding: 0px 30px 0px 30px;
-			display: inline;
+.navbar-icon-links img {
+  height: 1.8rem;
+  padding-left: 20px;
+  
+}
 
-			a {
-				font-size: 1.2rem;
-			}
-		}
-	}
+.navbar-hamburger-icon {
+  position: fixed;
+  height: 75px;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding-right: 25px;
+  z-index: 2;
+}
+
+.navbar-hamburger-icon img {
+  width: 1.6rem;
 }
