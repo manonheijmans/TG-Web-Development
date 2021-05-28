@@ -6,9 +6,9 @@
 
 .projects-grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
   column-gap: 10px;
-  row-gap: 80px;
+  row-gap: 5rem;;
   width: 80vw;
   margin: 0 auto 0 auto;
   padding-bottom: 100px;
@@ -20,15 +20,36 @@
 
 .projects h2 {
   grid-column-start: 1;
-  grid-column-end: 8;
+  grid-column-end: 13;
 }
 
+.project-card img {
+  width: 100%;
+  height: 100%;
+}
+
+//card positioning
+// ------------------------------------------
 
 .card1 {
   grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column-end: 8;
   z-index: 1;
 }
+
+.card2 {
+  grid-column-start: 6;
+  grid-column-end: 13;
+  grid-row-start: 3;
+  z-index: 1;
+}
+
+.card3{grid-column-start: 1;
+grid-column-end: 8;
+grid-row-start: 4;}
+
+// card background blocks 
+// ----------------------------------------
 
 .card1 .background {
   background-color: $secondary-color;
@@ -41,17 +62,14 @@
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
 }
-.projects-overlapping-cards-container {
-  grid-column-start: 4;
-  grid-column-end: 8;
-  grid-row-start: 3;
-  z-index: 1;
-}
 
 
+
+
+// card 2 backgrounds 
 
 .card2 .background-block1 {
-  background-color: $secondary-color;
+  background-color: $primary-color;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -66,9 +84,9 @@
 }
 
 .card2 .background-block2{
-  background-color: $primary-color;
+  background-color: $secondary-color;
   position: absolute;
-  width: 40%;
+  width: 5%;
   height: 20%;
   right: 100%;
   bottom: 0%;
@@ -77,28 +95,58 @@
   transition-timing-function: ease-out;
 }
 
-.project-card:hover .background-block1 {
+.card2:hover .background-block1 {
   width: 130%;
 
 }
-.project-card:hover .background-block2 {
+.card2:hover .background-block2 {
   width: 60%;
 }
+
+// card 3 background blocks
+// ---------------------------------------------------
+
+.card3 .background-block3 {
+  background-color: $secondary-color;
+  position: absolute;
+  width: 100%;
+  height: 5%;
+  bottom: 100%;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.card3 .background-block4 {
+  background-color: $primary-color;
+  position: absolute;
+  width: 0%;
+  height: 5%;
+  left: 100%;
+  bottom: 100%;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+.project-card:hover .background-block3 {width: 120%}
+
+.project-card:hover .background-block4 {width: 35%;
+transform: translateX(43%)}
+
+
+
+
+
+
+
 
   // flex stretch omhoog en position relative  proberen en breedte van de pagina's klopt ook niet meer. 
 
 
-.card3 {
-  position: relative;
-  top: 0%;
-  left: -60%;
-  z-index: 2;
-}
 
 
 
-
-
+// overlay styling 
+// -------------------------------------------
 .overlay {
   position: absolute;
   top: 0;
@@ -110,11 +158,6 @@
   background-color: $background-color;
   transition-duration: 0.5s;
   transition-timing-function: ease-in;
-}
-
-.project-card img {
-  width: 100%;
-  height: 100%;
 }
 
 .project-card:hover .overlay {
@@ -153,7 +196,7 @@
 }
 
 .project-card:hover .slider {
-  width: 400px;
+  width: 50%;;
 }
 
 .card1:hover .background {
