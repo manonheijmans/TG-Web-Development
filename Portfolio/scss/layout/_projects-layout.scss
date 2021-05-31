@@ -1,222 +1,179 @@
-.projects {
-  background-color: $background-color;
-  position: relative;
-  margin-top: 100px;
-}
+// .projects {
+//   background-color: $background-color;
+//   position: relative;
+//   margin-top: 100px;
+// }
 
-.projects-grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-  column-gap: 10px;
-  row-gap: 5rem;;
-  width: 80vw;
-  margin: 0 auto 0 auto;
-  padding-bottom: 100px;
-}
+// .projects-flex-container {
+//   display: flex;
+//   width: 80vw;
+//   flex-direction: column;
+//   gap: 5rem;
+//   margin: 0 auto 0 auto;
+//   padding-bottom: 100px;
+// }
 
-.project-card {
-  position: relative;
-}
+// .project-card {
+//   position: relative;
+//   width: 50rem;
+//   z-index: 1;
+// }
 
-.projects h2 {
-  grid-column-start: 1;
-  grid-column-end: 13;
-}
+// .project-card img {
+//   width: 100%;
+//   height: 100%;
+// }
 
-.project-card img {
-  width: 100%;
-  height: 100%;
-}
+// //card positioning
+// // ------------------------------------------
 
-//card positioning
-// ------------------------------------------
+// .card2 {
+//   align-self: flex-end;
+// }
 
-.card1 {
-  grid-column-start: 1;
-  grid-column-end: 8;
-  z-index: 1;
-}
+// //overlay-styling ------------------------------------------
 
-.card2 {
-  grid-column-start: 6;
-  grid-column-end: 13;
-  grid-row-start: 3;
-  z-index: 1;
-}
+// .overlay {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   opacity: 0.2;
+//   width: 100%;
+//   background-color: $background-color;
+//   transition-duration: 0.5s;
+//   transition-timing-function: ease-in;
+// }
 
-.card3{grid-column-start: 1;
-grid-column-end: 8;
-grid-row-start: 4;}
+// .project-card:hover .overlay {
+//   opacity: 0;
+// }
 
-// card background blocks 
-// ----------------------------------------
+// // card background blocks
+// // ----------------------------------------
 
-.card1 .background {
-  background-color: $secondary-color;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: -40px;
-  left: -50px;
-  z-index: -1;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
-}
+// .background-block {
+//   position: absolute;
+//   z-index: -1;
+//   transition-duration: 0.5s;
+//   transition-timing-function: ease-out;
+// }
 
+// //card 1 background blocks ----------------------------------------
 
+// .card1 .background-block {
+//   background-color: $secondary-color;
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   top: -40px;
+//   left: -50px;
+// }
 
+// .card1:hover .background-block {
+//   width: 120%;
+// }
 
-// card 2 backgrounds 
+// // card 2 background blocks ---------------------------------------
 
-.card2 .background-block1 {
-  background-color: $primary-color;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 40px;
-  right: -50px;
-  z-index: -1;
-}
+// .card2 .background-block:nth-child(1) {
+//   background-color: $primary-color;
+//   width: 100%;
+//   height: 100%;
+//   bottom: 40px;
+//   right: -50px;
+// }
 
-.card2 .background-block1{
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
-}
+// .card2 .background-block:nth-child(2) {
+//   background-color: $secondary-color;
+//   width: 5%;
+//   height: 20%;
+//   right: 100%;
+//   bottom: 0%;
+// }
 
-.card2 .background-block2{
-  background-color: $secondary-color;
-  position: absolute;
-  width: 5%;
-  height: 20%;
-  right: 100%;
-  bottom: 0%;
-  z-index: -1;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
-}
+// .card2:hover .background-block:nth-child(1) {
+//   width: 130%;
+// }
 
-.card2:hover .background-block1 {
-  width: 130%;
-
-}
-.card2:hover .background-block2 {
-  width: 60%;
-}
-
-// card 3 background blocks
-// ---------------------------------------------------
-
-.card3 .background-block3 {
-  background-color: $secondary-color;
-  position: absolute;
-  width: 100%;
-  height: 5%;
-  bottom: 100%;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
-}
-
-.card3 .background-block4 {
-  background-color: $primary-color;
-  position: absolute;
-  width: 0%;
-  height: 5%;
-  left: 100%;
-  bottom: 100%;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
-}
-
-.project-card:hover .background-block3 {width: 120%}
-
-.project-card:hover .background-block4 {width: 35%;
-transform: translateX(43%)}
+// .card2:hover .background-block:nth-child(2) {width: 60%;}
 
 
+// // card 3 background blocks
+// // ---------------------------------------------------
 
+// .card3 .background-block:nth-child(1) {
+//   background-color: $secondary-color;
+//   width: 100%;
+//   height: 6%;
+//   bottom: 99%;
+// }
 
+// .card3 .background-block:nth-child(2) {
+//   background-color: $primary-color;
+//   width: 0%;
+//   height: 6%;
+//   left: 100%;
+//   bottom: 99%;
+// }
 
+// .card3:hover .background-block:nth-child(1) {
+//   width: 120%;
+// }
 
+// .card3:hover .background-block:nth-child(2) {
+//   width: 35%;
+//   transform: translateX(43%);
+// }
 
+// // Sliders -------------------------------------------------------
 
-  // flex stretch omhoog en position relative  proberen en breedte van de pagina's klopt ook niet meer. 
+// .slider {
+//   height: 100%;
+//   position: absolute;
+//   top: 0;
+//   width: 0;
+//   background-color: white;
+//   transition-duration: 0.5s;
+//   transition-timing-function: ease-out;
+//   overflow: hidden;
+// }
 
+// .slider-text {
+//   width: 18.75rem;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   -webkit-transform: translate(-50%, -50%);
+//   -ms-transform: translate(-50%, -50%);
+//   transform: translate(-50%, -50%);
+// }
 
+// .card1 .slider,
+// .card3 .slider {
+//   left: 100%;
+// }
 
+// .card2 .slider {
+//   right: 100%;
+// }
 
+// .project-card:hover .slider {
+//   width: 50%;
+// }
 
-// overlay styling 
-// -------------------------------------------
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.2;
-  width: 100%;
-  background-color: $background-color;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in;
-}
+// .card1 .slider-accent {
+//   background-color: $primary-color;
+//   width: 1rem;
+//   height: 0px;
+//   position: absolute;
+//   bottom: 0;
+//   right: 0;
+//   transition-duration: 0.5s;
+//   transition-timing-function: ease-in;
+// }
 
-.project-card:hover .overlay {
-  opacity: 0;
-}
-
-
-// Sliders
-// -----------------------------------------------
-
-.slider {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 0;
-  background-color: white;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
-  overflow: hidden;
-}
-
-.slider-text {
-  width: 300px;
-  color: black;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.card1 .slider{
-  left: 100%;
-}
-
-.project-card:hover .slider {
-  width: 50%;;
-}
-
-.card1:hover .background {
-  width: 120%;
-}
-
-.card2 .slider {
-  right: 100%;
-}
-
-.card3 .slider {left: 100%;}
-
-.slider-accent{width: 1rem;
-  height: 0px;
-background-color: $primary-color;
-position: absolute;
-bottom: 0;
-right: 0;
-transition-duration: 0.5s;
-transition-timing-function: ease-in;}
-
-
-.card1:hover .slider-accent {height: 20%;}
+// .card1:hover .slider-accent {
+//   height: 20%;
+// }

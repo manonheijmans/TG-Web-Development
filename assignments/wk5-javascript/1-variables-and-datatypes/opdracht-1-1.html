@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<h1>Opdracht 1.1</h1>
+<p><b>We onderzoeken het verschil tussen var, let en const. Gegeven zijn een aantal voorbeelden - schrijf eerst je
+        verwachtingen op voordat je ze zelf nabootst. Kijk vervolgens wat er bij jou in de console gelogd wordt - is dat
+        wat je verwachtte? Zo nee, deel het dan aan het einde van de dag met je groep.
+    </b></p>
+<p>a.<br>
+    let letOefening = "Let Tekst" <br>
+    let letOefening = "Let Tekst Twee!" <br>
+    console.log(letOefening)</p>
+<p><i>Variabelen moeten elk een unieke naam hebben, dat is hier niet het geval, dus ik verwacht een foutmelding. Let kan niet worden gereassigned in dezelfde scope. </i>
+</p>
+<p> b. <br>
+    let letOefening = "Let Tekst"<br>
+    console.log(letOefening)<br>
+
+    letOefening = "Let Tekst Twee!"<br>
+    console.log(letOefening)</p>
+<p><i>Ik verwacht dat zowel Let Tekst, als Let Tekst Twee! gelogd zullen worden. De tweede regel is geen variabele? . </i>
+</p>
+<p>c.  <br>
+     const constOefening = "Const Tekst"; <br>
+    console.log (constOefening)<br>
+
+    const constOefening = "Const Tekst Twee!";<br>
+    console.log (constOefening)</p>
+    <p><i>Ik verwacht een foutmelding. Een const kan niet worden gereassigned. </i></p>
+<p>d. <br>
+    varOefening = "Var Tekst";<br>
+    console.log(varOefening) <br>
+
+    var varOefening = "Var Tekst Twee!";<br>
+    console.log(varOefening);<br>
+
+    var varOefening = "Var Tekst Drie!";<br>
+    console.log(varOefening);</p>
+    <p><i>Ik verwacht dat ze alledrie gelogd worden. De eerste log heeft geen functie en var kan gereassigned worden. </i></p>
+
+
+<script>
+    // // a
+    //    let letOefening = "Let Tekst"
+    //    let letOefening = "Let Tekst Twee!"
+    //    console.log(letOefening)
+
+
+    // // b
+    //     let letOefening = "Let Tekst"
+    //     console.log(letOefening)
+
+    //     letOefening = "Let Tekst Twee!"
+    //     console.log(letOefening)
+
+    // // c
+    // const constOefening = "Const Tekst";
+    // console.log (constOefening)
+
+    // const constOefening = "Const Tekst Twee!";
+    // console.log (constOefening)
+
+    //d
+    varOefening = "Var Tekst";
+    console.log(varOefening)
+
+    var varOefening = "Var Tekst Twee!";
+    console.log(varOefening);
+
+    var varOefening = "Var Tekst Drie!";
+    console.log(varOefening);
+
+
+
+
+</script>
+</body>
+
+</html>
