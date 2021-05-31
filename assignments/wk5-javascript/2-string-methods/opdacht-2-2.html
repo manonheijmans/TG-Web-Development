@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Opdracht 2.2</h1>
+    <p><b>substring() en slice() lijken erg op elkaar. We onderzoeken de verschillen. Test dit met een eigen string, of
+            gebruik het vorige voorbeeld.
+        </b></p>
+    <p>let someKittens = "De poes van de buurman heeft kittens gehad. Hij vraagt of wij nog kittens willen.";</p>
+
+    <p><b>substring() en slice() kunnen 2 waardes meegegeven worden - een index waar de nieuwe waarde begint en een
+            index waar deze moet eindigen. <br>
+            a. Wat doet substring() als het eerste getal hoger is dan het tweede getal?</b></p>
+    <p> console.log(someKittens.substring(43, 23))<br><br>
+        <i>Geeft: <br>
+            "heeft kittens gehad."
+        </i>
+    </p>
+
+    <p><b>b. Wat doet slice() als het eerste getal hoger is dan het tweede getal?</b></p>
+    <p> console.log(someKittens.slice(43, 23))<br><br>
+        <i>Geeft: <br>
+            "empty string"
+        </i>
+    </p>
+    <p><b>Deze waardes hoeven niet per se positief te zijn - je kan ook negatieve getallen meegeven.<br>
+        c. Wat doet substring() bij negatieve waardes?</b></p>
+    <p> console.log(someKittens.substring(-43, -23))<br>
+        console.log(someKittens.substring(-23, -43))<br><br>
+        <i>Geven beiden: <br>
+            "empty string"</i>
+    </p>
+    <p> console.log(someKittens.slice(-43, -23))<br>
+        console.log(someKittens.slice(-23, -43))<br><br>
+        <i>Geven: <br>
+            "ehad. Hij vraagt of "<br>
+            "empty string"</i>
+    </p>
+
+
+
+    <script>
+        let someKittens = "De poes van de buurman heeft kittens gehad. Hij vraagt of wij nog kittens willen.";
+
+        console.log(someKittens.substring(43, 23))
+
+        console.log(someKittens.slice(43, 23))
+
+        console.log(someKittens.substring(-43, -23))
+        console.log(someKittens.substring(-23, -43))
+
+        console.log(someKittens.slice(-43, -23))
+        console.log(someKittens.slice(-23, -43))
+
+    </script>
+</body>
+
+</html>
