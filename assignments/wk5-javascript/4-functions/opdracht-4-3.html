@@ -56,12 +56,34 @@
 
     
     <!-- vraag c ------------------------------------------------------------------------- -->
-    <p><b>Er zijn nog 2 belangrijke Math methods die handig zijn om te kennen. Onderzoek wat Math.min() en Math.max() doen. Kan je van beide al een voorbeeld geven?
+    <p><b>c. Er zijn nog 2 belangrijke Math methods die handig zijn om te kennen. Onderzoek wat Math.min() en Math.max() doen. Kan je van beide al een voorbeeld geven?
     </b></p>
     <p><i>The static function Math.min() returns the lowest-valued number passed into it, or NaN if any parameter isn't a number and can't be converted into one.<br>
         The Math.max() function returns the largest of the zero or more numbers given as input parameters, or NaN if any parameter isn't a number and can't be converted into one.
     </i></p>
+    <p><b>Math.max example</b></p>
+    <pre> 
+    function mathMaxExample(x, y, z){
+    return Math.max(x, y, z);
+    }
 
+    let resultMax = mathMaxExample(1, 8, 3)
+
+    console.log(resultMax)</pre>
+
+    <p><b>Math.min example</b></p>
+    <pre>
+    function mathMinExample(x, y, z,){
+        return Math.min(x, y, z);
+    }
+
+    let resultMin = mathMinExample(2,10,6)
+
+    console.log(resultMin)
+    </pre>
+    <p><i>In het math.Max voorbeeld wordt het hoogste getal gelogd. In het math.Min voorbeeld het laagste getal.</i></p>
+
+    
 
 
 
@@ -85,14 +107,27 @@
 
     let variabeleX = 10
 
+
 //vraag c =============================================================
 
-    function mathMaxExample (a, b, c){
-        console.log(Math.max(a, b, c))
+    function mathMaxExample(x, y, z){
+        return Math.max(x, y, z);
     }
 
+    let resultMax = mathMaxExample(1, 8, 3)
+
+    console.log(resultMax)
    
 
+
+
+    function mathMinExample(x, y, z,){
+        return Math.min(x, y, z);
+    }
+
+    let resultMin = mathMinExample(2,10,6)
+
+    console.log(resultMin)
 
 
  
