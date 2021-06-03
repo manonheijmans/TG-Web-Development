@@ -39,12 +39,12 @@ let inputVar = document.getElementById('inputExample');
 
     <pre>
 function ParameterExample(parameter) {
-    console.log("This is a parameter: " + parameter)
+    console.log(parameter)
 }
 
 ParameterExample(inputVar)        
     </pre>
-<p><i>Het volgende wordt gelogd: This is a parameter: [object HTMLInputElement]</i></p>
+<p><i>Het volgende wordt gelogd: &lt;input id="inputExample" "type="text"&gt;</i></p>
 
 
 
@@ -83,11 +83,11 @@ console.log(result)
 
 //opdracht c ====================================================
         
-        function ParameterExample(parameter) {
-            console.log("This is a parameter: " + parameter)
+        function parameterExample(parameter) {
+            console.log(parameter)
         }
         
-        ParameterExample(inputVar)
+        parameterExample(inputVar)
 
 //opdracht d ====================================================
        
@@ -96,7 +96,7 @@ console.log(result)
             return (x * 2);
         }
 
-        let result = parameterResultExample(10);
+        let result = parameterResultExample(30);
 
         console.log(result)
      
