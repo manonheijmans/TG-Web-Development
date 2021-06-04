@@ -7,46 +7,32 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Opdracht 4.4 c</h1>
-    <p><b>Schrijf nu het bovenstaande nogmaals, maar gebruik dit keer Arrow Functions. Als het niet overal lukt is dat niet erg! </b></p>
-
-    <input id="nameInput" onchange="nameChecker()" placeholder="onchange example">
+<h1>Opdracht 4.4c</h1>
+   
+    <input id="nameInput" onchange="namePrinter()" placeholder="onchange example">
     <br>
     <br>
     <div id="nameCheckerOutput"></div>
 
-    <pre>
-    &lt;input id="nameInput" onchange="nameChecker()" placeholder="name checker">
-
-    
-    </pre>
-
 <script>
-       
+
+   
 function nameChecker(){
 let nameVar = document.getElementById('nameInput').value;
-
-let nameCheckerDisplay;
-
 switch (nameVar) {
 case "Ryno":
 case "Joeri":
 case "Kate":
 case "Manon":
-    nameCheckerDisplay = "Deze persoon zit in breakoutroom 1";
-    console.log("Deze persoon zit in breakoutroom 1");
+    return "Yay, you're part of my team!";
 break;
-default: console.log("Deze persoon zit niet breakoutroom 1");
-    nameCheckerDisplay = "Deze persoon zit niet in breakoutroom 1"
+default: 
+    return "Helaas, pindakaas";
     }
-
-    document.getElementById("nameCheckerOutput").innerHTML = nameCheckerDisplay;
 }
 
 
-</script>
-
-
+namePrinter = () => document.getElementById("nameCheckerOutput").innerText = nameChecker();
 
 </script>
 </body>

@@ -1,77 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-
-    <h1>Opdracht 4.4 b</h1>
-    <p><b> Schrijf een 2e functie die de eerste functie aanroept, en vervolgens de teruggegeven boodschap in een div
-            element op je pagina toont. Denk aan de DOM methods!<br></b></p>
-
-    <input id="nameInput" onchange="nameChecker()" placeholder="onchange example"><br><br>
-
+    <h1>Opdracht 4.4b</h1>
+   
+    <input id="nameInput" onchange="namePrinter()" placeholder="onchange example">
+    <br>
+    <br>
     <div id="nameCheckerOutput"></div>
-    <pre>
-    &lt;input id="nameInput" onchange="nameChecker()" placeholder="name checker">
+ 
 
-    function nameChecker() {
-        let nameVar = document.getElementById('nameInput').value;
-
-        let nameCheckerDisplay;
-
-        switch (nameVar) {
-            case "Ryno":
-            case "Joeri":
-            case "Kate":
-            case "Manon":
-                nameCheckerDisplay = "Deze persoon zit in breakoutroom 1";
-                console.log("Deze persoon zit in breakoutroom 1");
-                break;
-            default: console.log("Deze persoon zit niet breakoutroom 1");
-                nameCheckerDisplay = "Deze persoon zit niet in breakoutroom 1"
-        }
-
-        document.getElementById("nameCheckerOutput").innerHTML = nameCheckerDisplay;
+<script>
+    
+function nameChecker(){
+let nameVar = document.getElementById('nameInput').value;
+switch (nameVar) {
+case "Ryno":
+case "Joeri":
+case "Kate":
+case "Manon":
+    return "Yay, you're part of my team!";
+break;
+default: 
+    return "Helaas, pindakaas";
     }
+}
 
-    </pre>
-
-    <script>
-
-
-
-        function nameChecker() {
-            let nameVar = document.getElementById('nameInput').value;
-
-            let nameCheckerDisplay;
-
-            switch (nameVar) {
-                case "Ryno":
-                case "Joeri":
-                case "Kate":
-                case "Manon":
-                    nameCheckerDisplay = "Deze persoon zit in breakoutroom 1";
-                    console.log("Deze persoon zit in breakoutroom 1");
-                    break;
-                default: console.log("Deze persoon zit niet breakoutroom 1");
-                    nameCheckerDisplay = "Deze persoon zit niet in breakoutroom 1"
-            }
-
-            document.getElementById("nameCheckerOutput").innerHTML = nameCheckerDisplay;
-        }
+function namePrinter() {
+    document.getElementById("nameCheckerOutput").innerText = nameChecker();
+}
 
 
-    </script>
+</script>
 
 
 
-    </script>
+</script>
 </body>
-
 </html>
