@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Opdracht 5.3</h1>
+
+    <script>
+
+//vraag a ==============================
+const dutchSports =["Voetbal", "Hockey", "Schaatsen"]
+
+dutchSports.push("Zeilen", "Zwemmen")
+
+console.log(dutchSports)
+
+
+//vraag b ==============================
+dutchSports.unshift("Volleybal")
+
+console.log(dutchSports)
+
+
+//vraag c ==============================
+let ballSports = dutchSports.slice(0, 3)
+
+console.log(ballSports)
+console.log (dutchSports)
+
+
+//vraag d ==============================
+dutchSports.splice(0, 3)
+console.log(dutchSports)
+
+
+//vraag e =============================
+dutchSports.sort();
+console.log(dutchSports)
+
+
+//vraag f =============================
+dutchSports.forEach(element => console.log(element));
+
+
+//vraag g =============================
+let sportsLength = dutchSports.map(element => element.length)
+console.log(sportsLength)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Opdracht 5.2</h1>
+
+
+    <script>
+
+        // Opdracht a 
+
+        const dutchSports = ['Voetbal', 'Hockey', 'Schaatsen']
+
+        for (let i = 0; i < dutchSports.length; i++) { console.log(dutchSports[i]) }
+
+
+
+        //Opdracht b 
+
+        for (const index in dutchSports) { console.log(index) }
+
+        for (const item of dutchSports) { console.log(item) }
+
+
+
+        // Opdracht c 
+
+        for (let i = 1; i <= 20; i++) {
+            if (i % 2 == 0)
+                console.log(i)
+        }
+
+
+        // Opdracht d 
+
+        for (let i = 0; i < 3; i++) {
+            for (let x = 1; x <= 10; x++) {
+                console.log(x);
+            }
+
+            for (let y = 1; y <= 20; y++) {
+                if (y % 2 == 0)
+                    console.log(y)
+            }
+
+            for (let z = 3; z <= 30; z++) {
+                if (z % 3 == 0)
+                    console.log(z)
+            }
+        }
+
+        // Opdracht e
+        let fibonacciArray = [0, 1]
+
+        for (let i = 0; i < 49; i++) {
+            fibonacciArray.push(fibonacciArray[fibonacciArray.length - 2] + fibonacciArray[fibonacciArray.length - 1])
+        }
+        console.log(fibonacciArray)
+
+        
+
+        //Opdracht f 
+
+        let bubbleArr = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6];
+
+        bubbleSort(bubbleArr);
+
+        function bubbleSort(param) {
+            for (let i = 0; i < bubbleArr.length; i++) {
+
+                for (let j = 0; j < (bubbleArr.length - i - 1); j++) {
+
+                    if (bubbleArr[j] > bubbleArr[j + 1]) {
+                        let temp = bubbleArr[j]
+                        bubbleArr[j] = bubbleArr[j + 1]
+                        bubbleArr[j + 1] = temp
+                    }
+                }
+            }
+            console.log(bubbleArr);
+        }
+
+      
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
