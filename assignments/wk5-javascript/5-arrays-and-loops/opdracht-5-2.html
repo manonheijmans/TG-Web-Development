@@ -57,34 +57,34 @@
         }
 
         // Opdracht e
-        let fibonacciArray = [0, 1]
+        let fibonacci = [0, 1]
 
         for (let i = 0; i < 49; i++) {
-            fibonacciArray.push(fibonacciArray[fibonacciArray.length - 2] + fibonacciArray[fibonacciArray.length - 1])
+            fibonacci.push(fibonacci[fibonacci.length - 2] + fibonacci[fibonacci.length - 1])
         }
-        console.log(fibonacciArray)
+        console.log(fibonacci)
 
         
 
         //Opdracht f 
 
-        let bubbleArr = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6];
+        let bubble = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6];
 
-        bubbleSort(bubbleArr);
+        bubbleSort(bubble);
 
         function bubbleSort(param) {
-            for (let i = 0; i < bubbleArr.length; i++) {
+            for (let i = 0; i < bubble.length; i++) {
 
-                for (let j = 0; j < (bubbleArr.length - i - 1); j++) {
+                for (let j = 0; j < (bubble.length - i - 1); j++) {
 
-                    if (bubbleArr[j] > bubbleArr[j + 1]) {
-                        let temp = bubbleArr[j]
-                        bubbleArr[j] = bubbleArr[j + 1]
-                        bubbleArr[j + 1] = temp
+                    if (bubble[j] > bubble[j + 1]) {
+                        let temp = bubble[j]
+                        bubble[j] = bubble[j + 1]
+                        bubble[j + 1] = temp
                     }
                 }
             }
-            console.log(bubbleArr);
+            console.log(bubble);
         }
 
       
