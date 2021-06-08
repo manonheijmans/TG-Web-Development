@@ -1,3 +1,31 @@
+
+.projects {
+  background-color: $background-color;
+  position: relative;
+  margin-top: 5vw;
+  padding-bottom: 5vw;
+}
+
+.projects-flex-container {
+    width: 90vw;
+    margin: 0 auto 0 auto;
+}
+
+.project-card {
+    margin-bottom: 5vh;
+    background-color: white;
+}
+
+.projects h2 {padding-bottom: 1rem;}
+
+.projects p {padding: 1rem}
+
+
+
+
+
+// DESKTOP CODE =======================================================================
+
 // .projects {
 //   background-color: $background-color;
 //   position: relative;

@@ -81,8 +81,30 @@ console.log(pet5proto)
 
 //Opdracht c =====================================
 
+function Person(name, age) {
+  this.name  = name;
+  this.age = age;
+}
 
+let person1 = new Person ("John", 30);
+let person2 = new Person ("Jane", 22);
+let person3 = new Person ("Mary", 38);
+let person4 = new Person ("Daniel", 52);
+let person5 = new Person ("Pete", 10);
+let person6 = new Person ("Kate", 17);
+let person7 = new Person ("Taylor", 56);
+let person8 = new Person ("Emma", 31);
+let person9 = new Person ("Brian", 48);
+let person10 = new Person ("Michael", 61);
 
+let personArr = [person1, person2, person3, person4, person5, person6, person7, person8, person9, person10]
+console.log(personArr)
+
+personArr.sort(function (a, b) {
+  return a.age - b.age;
+});
+
+console.log(personArr)
 
 
 </script>
