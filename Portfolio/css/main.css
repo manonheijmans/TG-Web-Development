@@ -89,7 +89,7 @@ a {
 
 p {
   font-family: "TTRoundsNeue-Thin";
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -107,7 +107,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2.2rem;
   text-align: center;
   padding-top: 60px;
 }
@@ -128,7 +128,7 @@ h2 {
 }
 
 .slider-text p:nth-child(2) {
-  font-size: 1rem;
+  font-size: 0.8rem;
   padding-bottom: 1rem;
 }
 
@@ -176,7 +176,6 @@ h2 {
 }
 
 .projects {
-  background-color: #dbd7ca;
   position: relative;
   margin-top: 5vw;
   padding-bottom: 5vw;
@@ -187,22 +186,105 @@ h2 {
   margin: 0 auto 0 auto;
 }
 
-.project-card {
-  margin-bottom: 5vh;
-  background-color: white;
-}
-
 .projects h2 {
   padding-bottom: 1rem;
 }
 
-.projects p {
+.project-card {
+  margin-bottom: 5vh;
+  border-left: solid 5px #0118bf;
+  position: relative;
+}
+
+.project-card-image-container {
+  position: relative;
+  height: 100%;
+  width: 90vw;
+}
+
+.project-card-image-container img {
+  width: 90vw;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  width: 90vw;
+  height: 100%;
+  background-color: #dbd7ca;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.project-card:hover .overlay {
+  opacity: 0;
+}
+
+.slider-text {
   padding: 1rem;
 }
 
-.about-container {
+.border-accent {
+  background-color: #ebbd21;
+  height: 0%;
+  width: 5px;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.project-card:hover .border-accent {
+  height: 100%;
+}
+
+.about-information-container {
+  position: relative;
+}
+
+.about-text-container {
   width: 90vw;
   margin: 0 auto 0 auto;
+}
+
+.about-skills-container {
+  background-color: #0118bf;
+  height: 20vh;
+}
+
+.about-skills-icons-container {
+  width: 80vw;
+  height: 100%;
+  margin: 0 auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-skills-icons-container img {
+  width: 3rem;
+}
+
+.about-block-object-bottom {
+  position: absolute;
+  width: 1vw;
+  height: 10%;
+  bottom: 0px;
+  right: 0px;
+  background-color: #ebbd21;
 }
 
 @media (max-width: 576px) {
