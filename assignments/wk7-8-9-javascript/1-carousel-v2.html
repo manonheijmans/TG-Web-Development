@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3ef49ce8f5.js" crossorigin="anonymous"></script>
+
+    <title>DIY Carousel - 2</title>
+    <style>
+        /* Parent wrapper to carousel. Width can be changed as needed. */
+
+.carousel-container {
+    width: 60vw;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;  
+    }
+
+/* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
+
+/* We'll be using the 'transform' property to move the carousel's items, so setting the 'transform-style' to 'preserve-3d' will make sure our nested elements are rendered properly in the 3D space. */
+.carousel-image-container {
+    width: 60vw;
+    transform-style: preserve-3d;
+   
+}
+
+/* By default we're hiding items (except the initial one) until the JS initiates. Elements are absolutely positioned with a width of 100% (as we're styling for mobile first), letting the content's height dictate the height of the carousel. Our magic property here for all our animation needs is 'transition', taking the properties we wish to animate 'transform' and 'opacity', along with the length of time in seconds. */
+.carousel-image { 
+  width: 60vw;
+  position: absolute;
+  display: block;
+  top:0;
+  z-index: 100;
+  transition: transform .5s, z-index .5s;
+}
+
+/* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
+.carousel-image.initial,
+.carousel-image.active {
+  position: relative;
+  z-index: 900;
+
+}
+
+/* Set 'z-index' to sit behind our '.active' item. */
+.carousel-image.prev,
+.carousel-image.next {
+  z-index: 800;
+}
+
+/* Translate previous item to the left */
+.carousel-image.prev {
+  transform: translateX(-100%);
+  border-radius: 25px;
+}
+
+/* Translate next item to the right */
+.carousel-image.next {
+  transform: translateX(100%);
+  border-radius: 25px;
+}
+
+/* Style navigation buttons to sit in the middle, either side of the carousel. */
+.carousel-controls {
+            position: absolute;
+            background-color: rgb(85, 85, 85);
+            opacity: 0.3;
+            height: 100%;
+            width: 5%;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-controls:hover {
+            opacity: 0.6
+        }
+
+        .carousel-controls-prev {
+            top: 0;
+            left: 0;
+            border-radius: 25px 0px 0px 25px;
+        }
+
+        .carousel-controls-next {
+            top: 0;
+            right: 0;
+            border-radius: 0px 25px 25px 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>DIY Carousel - 2</h1>
+    <div class="carousel-container">
+        <div class="carousel-image-container">
+    
+          <img class="carousel-image initial" src="/img/wk7-8-9-javascript/1-carousel/carousel1.jpg">
+          <img class="carousel-image" src="/img/wk7-8-9-javascript/1-carousel/carousel2.jpg">
+          <img class="carousel-image" src="/img/wk7-8-9-javascript/1-carousel/carousel3.jpg">
+          <img class="carousel-image" src="/img/wk7-8-9-javascript/1-carousel/carousel1.jpg">
+          <img class="carousel-image" src="/img/wk7-8-9-javascript/1-carousel/carousel2.jpg">
+        </div>
+        
+        <div class="carousel-controls carousel-controls-prev">
+        <p><i class="fas fa-chevron-left fa-2x"></i></p>
+        </div>
+        <div class="carousel-controls carousel-controls-next">
+        <p><i class="fas fa-chevron-right fa-2x"></i></p>
+        </div>
+        </div>
+    
+   
+      <script>
+         
+  // Variables to target our base class,  get carousel items, count how many carousel items there are, set the slide to 0 (which is the number that tells us the frame we're on), and set motion to true which disables interactivity.
+  
+  let itemClassName = "carousel-image";
+  let items = document.getElementsByClassName(itemClassName)
+  let totalItems = items.length
+    let slide = 0
+    let  moving = true; 
+
+    let next = document.getElementsByClassName('carousel-controls-next')[0] //waarom die [0]?
+    let prev = document.getElementsByClassName('carousel-controls-prev')[0]
+
+
+  function setInitialClasses() {
+    items[totalItems - 1].classList.add("prev");
+    items[0].classList.add("active");
+    items[1].classList.add("next");
+  }
+
+  function setEventListeners() {
+
+    next.addEventListener('click', moveNext);
+    prev.addEventListener('click', movePrev);
+
+  }
+
+  function disableInteraction() {
+    moving = true;
+
+    setTimeout(function(){
+      moving = false
+    }, 500);
+  }
+
+  function moveCarouselTo(slide) {
+
+    if(!moving) {
+
+      disableInteraction();
+
+      
+      var newPrevious = slide - 1,
+          newNext = slide + 1,
+          oldPrevious = slide - 2,
+          oldNext = slide + 2;
+
+  
+      if ((totalItems - 1) > 3) {
+
+        if (newPrevious <= 0) {
+          oldPrevious = (totalItems - 1);
+        } else if (newNext >= (totalItems - 1)){
+          oldNext = 0;
+        }
+
+        if (slide === 0) {
+          newPrevious = (totalItems - 1);
+          oldPrevious = (totalItems - 2);
+          oldNext = (slide + 1);
+        } else if (slide === (totalItems -1)) {
+          newPrevious = (slide - 1);
+          newNext = 0;
+          oldNext = 1;
+        }
+
+        items[oldPrevious].className = itemClassName;
+        items[oldNext].className = itemClassName;
+
+        items[newPrevious].className = itemClassName + " prev";
+        items[slide].className = itemClassName + " active";
+        items[newNext].className = itemClassName + " next";
+      }
+    }
+   
+    
+  }
+
+
+  function moveNext() {
+
+    if (!moving) {
+
+      if (slide === (totalItems - 1)) {
+        slide = 0;
+      } else {
+        slide++;
+      }
+
+      moveCarouselTo(slide);
+    }
+  }
+
+
+  function movePrev() {
+
+    if (!moving) {
+ 
+      if (slide === 0) {
+        slide = (totalItems - 1);
+      } else {
+        slide--;
+      }
+
+      moveCarouselTo(slide);
+    }
+  }
+
+ 
+  function initCarousel() {
+    setInitialClasses();
+    setEventListeners();
+    moving = false;
+  }
+
+
+  initCarousel();
+
+
+
+
+
+      </script>
+
+      </body>
+      </html>
