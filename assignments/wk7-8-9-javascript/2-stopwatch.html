@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
+
+    <title>Stopwatch</title>
+</head>
+
+<style>
+    * {box-sizing: border-box;
+        margin: 0;
+        padding: 0;}
+
+        :root {
+  --bordercolor: #00B371;
+  --bordersecondcolor: #00E893;
+  --backgroundcolor: rgb(white);
+  --startcolor: rgb(218, 247, 166);
+  --pausecolor: rgb(255, 195, 0);
+  --stopcolor: rgb(255, 87, 51);
+        }
+
+
+    body {
+        background-color: var(--backgroundcolor);
+    }
+
+    h1 {text-align: center;
+    font-family: 'Montserat', sans-serif;
+    font-weight: 300;
+    padding-top: 20px;}
+
+  
+  
+    
+    .stopwatch-display {
+        height: 400px;
+        width: 400px;
+        border-radius: 50%;
+        padding: 30px;
+        margin: 100px auto 0px auto;
+        background-color: black;
+        color: white;
+        font-size: 2rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border: solid 10px rgb(26, 24, 24);
+    }
+
+    
+
+    .stopwatch-display:before {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        border-radius: 50%;
+        top: -15px;
+        left: -15px;
+        right: -15px;
+        bottom: -15px;
+        border: 5px solid var(--bordersecondcolor);
+        
+ 
+    }
+    .stopwatch-display:after {
+        content: " ";
+        position: absolute;
+        z-index: -2;
+        border-radius: 50%;
+        top: -35px;
+        left: -35px;
+        right: -35px;
+        bottom: -35px;
+        border: 20px solid var(--bordercolor);
+        filter: drop-shadow(0 0 10px black)
+}
+
+    .timer {
+        font-size: 3.5rem;
+        font-family: 'Orbitron', sans-serif;
+    }
+    
+
+    .stopwatch-controller {
+        display: flex;  
+        color: black;  
+    }
+
+    
+
+    .button {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: white 2px solid;
+        font-size: 0.7rem;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .button:nth-child(1) {
+        background-color: var(--startcolor);
+    }
+
+    .button:nth-child(2) {
+        background-color: var(--pausecolor);
+    }
+
+    .button:nth-child(3) {
+        background-color: var(--stopcolor);
+    }
+
+
+
+
+
+</style>
+<body>
+    <h1>Stopwatch v1</h1>
+    <div class="stopwatch-display">
+        <p>SKMEI</p>
+        <div class="timer"><p>00:00:00</p></div>
+        <div class="stopwatch-controller">
+            <div class="button start-button"><p>Start</p></div>
+            <div class="button pause-button"><p>Pause</p></div>
+            <div class="button stop-button"><p>Stop</p></div>
+        </div>
+
+
+    
+
+
+    </div>
+
+<script>
+
+    let startButton = document.querySelector('.start');
+    let pauseButton = document.querySelector('.pause');
+    let stopButton = document.querySelector('.stop');
+
+    let seconds = 0
+    let minutes = 0
+
+
+    //event listeners 
+    startButton.addEventListener("click",startFunction)
+    pauseButton.addEventListener("click",pauseFunction)
+    stopButton.addEventListener("click",stopFunction)
+
+
+    // button functions 
+    function startFunction() {
+        console.log("friet")
+    }
+
+    function pauseFunction() {
+        console.log("nugget")
+    }
+
+
+    function stopFunction() {
+        console.log("kroket")
+    }
+
+
+  
+
+    function timer() {
+       if (seconds === 0 || seconds < 60) {
+           seconds++
+       }
+       else if (seconds === 60) {
+            minutes++
+            seconds = 0;
+
+            console.log(seconds, minutes)
+       }
+
+
+
+       
+
+   }
+    
+   setInterval(timer, 1000)
+
+   console.log(setInterval)
+
+
+</script>
+
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet"> 
+    <title>Stopwatch-test</title>
+</head>
+
+<style>
+    * {box-sizing: border-box;
+        margin: 0;
+        padding: 0;}
+
+    body {
+        background-color: grey;
+    }
+
+  
+  
+    
+    .stopwatch-display {
+        height: 400px;
+        width: 400px;
+        border-radius: 50%;
+        padding: 30px;
+        margin: 0 auto;
+        background-color: black;
+        color: white;
+        font-size: 2rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border: solid 10px rgb(26, 24, 24);
+    }
+
+    
+
+    .stopwatch-display:before {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        border-radius: 50%;
+        top: -15px;
+        left: -15px;
+        right: -15px;
+        bottom: -15px;
+        border: 5px solid darkgrey;
+ 
+    }
+    .stopwatch-display:after {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        border-radius: 50%;
+        top: -35px;
+        left: -35px;
+        right: -35px;
+        bottom: -35px;
+        border: 20px solid grey;
+        filter: drop-shadow(0 0 20px white)
+}
+
+    .timer {
+        font-size: 3.5rem;
+        font-family: 'Orbitron', sans-serif;
+    }
+    
+
+    .stopwatch-controller {
+        display: flex;  
+        color: black;  
+    }
+
+    
+
+    .button {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: white 2px solid;
+        font-size: 0.7rem;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+    }
+
+    .button:nth-child(1) {
+        background-color: green;
+    }
+
+    .button:nth-child(2) {
+        background-color: orange;
+    }
+
+    .button:nth-child(3) {
+        background-color: red;
+    }
+
+
+
+
+
+</style>
+<body>
+    <h1>Stopwatch v1</h1>
+    <div class="stopwatch-display">
+        <p>SKMEI</p>
+       
+        <div class="timer">00:00:00</div>  
+        
+        <div class="stopwatch-controller">
+            <div class="button start"><p>Start</p></div>
+            <div class="button pause"><p>Pause</p></div>
+            <div class="button stop"><p>Stop</p></div>
+        </div>
+
+        </div>
+
+
+    <script>
+
+        let startButton = document.querySelector('.start');
+        let pauseButton = document.querySelector('.pause');
+        let stopButton = document.querySelector('.stop');
+
+        let seconds = 0
+        let minutes = 0
+
+
+        //event listeners 
+        startButton.addEventListener("click",startFunction)
+        pauseButton.addEventListener("click",pauseFunction)
+        stopButton.addEventListener("click",stopFunction)
+
+
+        // button functions 
+        function startFunction() {
+            console.log("friet")
+        }
+
+        function pauseFunction() {
+            console.log("nugget")
+        }
+
+
+        function stopFunction() {
+            console.log("kroket")
+        }
+
+      
+       let display = setInterval(timer, 1000) 
+
+       function timer() {
+        //    miliseconds++
+        //    if miliseconds = 10
+        //    seconds = 1
+        //    miliseconds = 0
+
+        //    seconds++
+        //     if seconds = 59
+        //     seconds = 0
+
+           
+            
+
+
+
+            if (seconds < 9) {
+              seconds++;
+              seconds = "0" + String(seconds)     
+            }
+
+            else if (seconds === 10 || seconds < 59) {
+               seconds++
+            }
+
+            else if (seconds === 59) {
+                minutes++
+                seconds = 0;  
+            }
+            document.querySelector(".timer").innerHTML = minutes + ": " + seconds;   
+
+        }
+
+        if (minutes === 0) {
+                minutes = "00"
+                } 
+
+            else if (minutes > 0 || minutes < 9) {
+            minutes = "0" + String(minutes)
+            }
+
+
+
+
+            
+
+          
+    
+
+           
+           
+           
+             
+       
+           
+      
+      
+  
+
+
+
+
+    </script>
+
+
+  
+</body>
+</html>

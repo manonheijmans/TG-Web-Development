@@ -8,8 +8,7 @@
 
     <title>DIY Carousel - 2</title>
     <style>
-        /* Parent wrapper to carousel. Width can be changed as needed. */
-
+       
 .carousel-container {
     width: 60vw;
     margin: 0 auto;
@@ -18,16 +17,12 @@
     border-radius: 25px;  
     }
 
-/* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
-
-/* We'll be using the 'transform' property to move the carousel's items, so setting the 'transform-style' to 'preserve-3d' will make sure our nested elements are rendered properly in the 3D space. */
 .carousel-image-container {
     width: 60vw;
     transform-style: preserve-3d;
    
 }
 
-/* By default we're hiding items (except the initial one) until the JS initiates. Elements are absolutely positioned with a width of 100% (as we're styling for mobile first), letting the content's height dictate the height of the carousel. Our magic property here for all our animation needs is 'transition', taking the properties we wish to animate 'transform' and 'opacity', along with the length of time in seconds. */
 .carousel-image { 
   width: 60vw;
   position: absolute;
@@ -37,7 +32,6 @@
   transition: transform .5s, z-index .5s;
 }
 
-/* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
 .carousel-image.initial,
 .carousel-image.active {
   position: relative;
@@ -45,25 +39,21 @@
 
 }
 
-/* Set 'z-index' to sit behind our '.active' item. */
 .carousel-image.prev,
 .carousel-image.next {
   z-index: 800;
 }
 
-/* Translate previous item to the left */
 .carousel-image.prev {
   transform: translateX(-100%);
   border-radius: 25px;
 }
 
-/* Translate next item to the right */
 .carousel-image.next {
   transform: translateX(100%);
   border-radius: 25px;
 }
 
-/* Style navigation buttons to sit in the middle, either side of the carousel. */
 .carousel-controls {
             position: absolute;
             background-color: rgb(85, 85, 85);
@@ -121,7 +111,6 @@
    
       <script>
          
-  // Variables to target our base class,  get carousel items, count how many carousel items there are, set the slide to 0 (which is the number that tells us the frame we're on), and set motion to true which disables interactivity.
   
   let itemClassName = "carousel-image";
   let items = document.getElementsByClassName(itemClassName)
