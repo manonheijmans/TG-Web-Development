@@ -29,31 +29,14 @@
   border-right: 2px solid $secondary-color;
 }
 
-.about-block-container {
-  position: relative;
-  min-width: 100vw;
-}
-
 .about-block-object-top {
   position: absolute;
   width: 10vw;
-  height: 5vh;
+  height: 3vh;
   top: 0;
   left: 0;
   background-color: $primary-color;
 }
-
-.about-skills-container {
-  background-color: $primary-color;
-  width: 100vw;
-  display: flex;
-  flex-wrap: row;
-  justify-content: space-between;
-}
-
-
-
-
 
 
 
@@ -61,118 +44,24 @@
 //Large screens ===================================================
 @media (min-width: $xxl-media) {
 
-  .about-text-container h2 {display: none;}
-
-  .about-container h3 {
-    font-size: 3rem;  
-  }
-
-  .about-text-container {padding-top: 100px;
-  max-width: 80vw;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-bottom: 20px;
-  }
-
 .about-text {
-  width: 35vw;
-  border: none;
   position: relative;
-}
-
-.text1 {
-  align-self: flex-end;
-}
-
-.text2 {text-align: left;
-}
-
-.text3 {align-self: center;
-transform: translateX(150px)}
-
-.about-block-object-bottom {
-  position: absolute;
-  width: 1vw;
-  min-height: 50vh;
-  top: 25%;
-  right: 0;
-  background-color: $secondary-color;
-}
-
-.about-image-skills {
-  position: relative;
-  justify-self: right;
-  width: 35%;
-}
-
-.about-skills-container img {
-  width: 100%;
-  display: block;
-}
-
-.about-skills-text {
-position: relative;
-width: 35%;
-padding-top: 10vh;
-padding-left: 5vw;}
-
-
-
-
-//Skills table ======================================
-
-.skills-flex-container{
-  margin: 15px;
-  position: absolute;
-  top: 60%;
-  right: 60%;
+  width: 600px;
 
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 40rem;
+.text1 {left: 5vw;}
+
+.text2 {left: 50vw;
+  text-align: left;
+  border-right: none;
+  border-left: 2px solid $secondary-color;
+
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
+.text3 {left: 20vw;}
+
 }
-
-.skills-column h4 {margin-bottom: 1rem;
-text-align: right;}
-
-
-
-
-//skill bars ================================================
-
-.skills-bar {
-background-color: white;
-height: 1.5rem;
-margin-bottom: 1rem;
-}
-
-.html-bar {width: 75%;}
-
-.css-bar {width: 60%;}
-
-.js-bar {width: 40%;}
-
-.react-bar {width: 5%}
-}
-
-
-
-
-
-
-
 
 
 

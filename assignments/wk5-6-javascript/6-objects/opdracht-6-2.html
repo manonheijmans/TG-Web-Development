@@ -25,8 +25,6 @@
             }
     }
 
-    console.log(club1)
-
     let club2= {
         name: "Roosje Music Club",
         type: "Music",
@@ -76,13 +74,12 @@ let clubArr = [club1, club2, club3, club4, club5]
 console.log(clubArr)
 
 
-function clubsInfoFunction(x) {
+function clubsInfoFunction (param) {
 for (let i = 0; i < clubArr.length; i++) {
-    console.log(x[i].name + " - contact: " + x[i].contact.spokesperson + ", " + x[i].contact.phone)}}
+    console.log(clubArr[i].name + " - contact: " + clubArr[i].contact.spokesperson + ", " + clubArr[i].contact.phone)}}
+
 
 clubsInfoFunction(clubArr)
-
-
 
 
     
