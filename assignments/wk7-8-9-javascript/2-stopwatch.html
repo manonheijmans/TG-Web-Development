@@ -59,7 +59,9 @@
         color: white;
         font-size: 2rem;
         position: relative;
-        display: flex;
+
+        /* flexbox */
+        display: flex;  
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -106,20 +108,20 @@
     }
 
     
-
     .button {
         height: 60px;
         width: 60px;
         border-radius: 50%;
         margin: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         border: white 2px solid;
         font-size: 0.7rem;
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         text-transform: uppercase;
+        /* flexbox */
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .button:nth-child(1) {
@@ -158,18 +160,19 @@
 
 <script>
 
-    let startButton = document.querySelector('.start');
-    let pauseButton = document.querySelector('.pause');
-    let stopButton = document.querySelector('.stop');
+    let startButton = document.querySelector('.start-button');
+    let pauseButton = document.querySelector('.pause-button');
+    let stopButton = document.querySelector('.stop-button');
 
-    let seconds = 0
-    let minutes = 0
+    let ms = 0
+    let sec = 0
+    let min = 0
 
 
     //event listeners 
-    startButton.addEventListener("click",startFunction)
-    pauseButton.addEventListener("click",pauseFunction)
-    stopButton.addEventListener("click",stopFunction)
+    startButton.addEventListener("click", startFunction)
+    pauseButton.addEventListener("click", pauseFunction)
+    stopButton.addEventListener("click", stopFunction)
 
 
     // button functions 
@@ -187,29 +190,52 @@
     }
 
 
-  
 
     function timer() {
-       if (seconds === 0 || seconds < 60) {
-           seconds++
+        sec = parseInt(sec);
+        min = parseInt(min);
+        ms = parseInt(ms);
+
+        ms++
+
+        if (ms == 10) {
+            sec++
+            ms = 0
+        }
+
+       if (sec == 60) {
+           sec = 0  
+           min++ 
        }
-       else if (seconds === 60) {
-            minutes++
-            seconds = 0;
 
-            console.log(seconds, minutes)
-       }
+       if (ms < 10 || ms == 0) {
+            ms = "0" + ms;
+    }
+        if (sec < 10 || sec == 0) {
+            sec = "0" + sec;
+    }
+        if (min < 10 || min == 0) {
+            min = "0" + min;
+    }
+
+    //    if (minutes == 99) 
+        
+
+       console.log(ms, sec, min)
+    }
 
 
 
-       
+    setInterval(timer, 100)
 
-   }
+ 
+
     
-   setInterval(timer, 1000)
 
-   console.log(setInterval)
+  
 
+
+    
 
 </script>
 
@@ -217,3 +243,4 @@
 </html>
 </body>
 </html>
+
