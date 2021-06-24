@@ -1,0 +1,17 @@
+@media (max-width: 450px) {
+  .mobile {
+    color: tomato;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 450px) {
+  .tablet {
+    color: tomato;
+  }
+}
+
+@media (min-width: 1200px) {
+  .desktop {
+    color: tomato;
+  }
+}

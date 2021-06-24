@@ -1,0 +1,31 @@
+.button {
+  background-color: slateblue;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  -webkit-filter: drop-shadow(0 0 0.75rem grey);
+          filter: drop-shadow(0 0 0.75rem grey);
+}
+
+.button:hover {
+  background-color: steelblue;
+  color: black;
+}
+
+.colorChangingSquare {
+  background-color: steelblue;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+}
+
+.colorChangingSquare:hover {
+  background-color: slateblue;
+}
