@@ -10,7 +10,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/3ef49ce8f5.js" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="css/main.css" />
   <title>Portfolio</title>
 
@@ -180,53 +181,51 @@
             placeat magnam modi voluptate.
             Porro placeat illo nulla aut quod cum mollitia sapiente ipsum ut.</p>
         </div>
-        <div class="about-image-skills">
-          <img class="profile-picture" src="/images/about/profilepicture-greyscale.png">
-          <div class='skills-flex-container'>
-            <div class='row'>
-              <div class='column'>
-                <div class='skills-column'>
-                  <h4>HTML</h4>
-                  <h4>CSS</h4>
-                  <h4>JavaScript</h4>
-                  <h4>React</h4>
-                  <h4>Sass</h4>
-                </div>
-              </div>
-              <div class="column">
-                <div class="bars-column">
-                  <div class="skills-bar html-bar"></div>
-                  <div class="skills-bar css-bar"></div>
-                  <div class="skills-bar js-bar"></div>
-                  <div class="skills-bar react-bar"></div>
-                  <div class="skills-bar sass-bar"></div>
-                </div>
-              </div>
-            </div>
+        <div class='skills-flex-container'>
+          <div class='skills-column'>
+            <h4>HTML</h4>
+            <h4>CSS</h4>
+            <h4>JavaScript</h4>
+            <h4>React</h4>
+            <h4>Sass</h4>
           </div>
+          <div class="bars-column">
+            <div class="skills-bar html-bar"></div>
+            <div class="skills-bar css-bar"></div>
+            <div class="skills-bar js-bar"></div>
+            <div class="skills-bar react-bar"></div>
+            <div class="skills-bar sass-bar"></div>
+          </div>   
         </div>
+        <div class="about-image-and-skills"></div>
+        <img class="profile-picture" src="/images/about/profilepicture-greyscale.png">
+      </div>
+        
       </div>
     </section>
 
     <section id="contact" class="contact-container">
       <h2>Contact </h2>
-      <div class="contact-name"></div>
-      <div class="contact-info"></div>
-      <p>mail: manon.heijmans@gmail.com</p>
-      <p>tel: +31 6 53 93 41 72</p>
-      <p>Nijmegen</p>
+      <div class="contact-info">
+        <p>mail: manon.heijmans@gmail.com</p>
+        <p>tel: +31 6 53 93 41 72</p>
+        <p>Nijmegen</p>
+      </div>
+      <div class="contact-socials">
+        <a href="https://github.com/manoninonam" target="_blank">
+          <p>Github: manoninonam</p>
+        </a>
+        <a href="https://www.linkedin.com/in/manon-heijmans/" target="_blank">
+          <p>LinkedIn: manon-heijmans</p>
+        </a>
+      </div>
+
+
     </section>
   </main>
 
 
 
-  <script>
-    function toggle() {
-      var curtain = document.getElementById('curtain');
-      curtain.classList.toggle('active')
-    }
-
-  </script>
 
 
 
@@ -235,37 +234,3 @@
 </body>
 
 </html>
-
-
-<!-- <h2>About</h2>
-        <div class="about-block-object-top"></div>
-        <div class="about-information-content-container">
-        <div class="about-text-container">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui tenetur provident dolorem magnam quis ipsam
-            nesciunt exercitationem tempore impedit fugit rem modi porro, repudiandae, vel dolorum blanditiis? Cumque,
-            suscipit eveniet!
-            Quas libero modi quia repudiandae incidunt vel! Quae illum earum voluptate laudantium eius assumenda, omnis
-            unde voluptatum minus eligendi molestias, corporis fugit a iusto beatae esse ratione ad voluptas mollitia.
-            Nulla exercitationem quaerat minus reprehenderit beatae temporibus cumque, ipsam in. Atque impedit mollitia
-            doloremque vero reprehenderit nostrum est facilis perspiciatis optio sapiente inventore modi tenetur, quidem
-            repudiandae, excepturi illo voluptatibus.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus dolorem iure eveniet suscipit dolorum.
-            Quasi quibusdam reiciendis similique nemo distinctio sed quidem quam commodi dolor ipsam, atque quod illum
-            iure!
-            Corrupti non commodi quis porro distinctio ipsa sequi? Quos quia enim delectus quod voluptates asperiores
-            minus repellendus ex cupiditate, officiis eos molestias reiciendis expedita nihil mollitia esse atque magnam
-            minima.</p>
-        </div>
-        <img class="about-profile-picture" src="images/about/profilepicture.jpg" alt="profile picture">
-        </div>
-        <div class="about-block-object-bottom"></div>
-      </div>
-      <div class="about-skills-container">
-        <div class="about-skills-icons-container">
-          <img src="/images/skills/html5-icon-filled.png" alt="html5 icon">
-          <img src="/images/skills/css3-icon-filled.png" alt="css3 icon">
-          <img src="/images/skills/sass-icon-filled.png" alt="sass icon">
-          <img src="/images/skills/javascript-icon.png" alt="javascript icon">
-          <img src="/images/skills/react-icon.png" alt="react icon">
-        </div>
-      </div> -->

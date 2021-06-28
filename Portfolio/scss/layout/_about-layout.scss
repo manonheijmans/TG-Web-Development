@@ -1,3 +1,5 @@
+
+
 .about-text-container {
   width: 90vw;
   margin: 0 auto;
@@ -5,7 +7,7 @@
   
 }
 
-.about-text-container h3 {
+.about-container h3 {
   font-size: 1.5rem;
   
 }
@@ -17,10 +19,6 @@
 
 .about-text p{padding-bottom: 0px;}
 
-.text2 {
-  text-align: right;
-}
-
 .text1, .text3 {
   border-left: 2px solid $secondary-color;
 }
@@ -28,6 +26,19 @@
 .text2 {
   border-right: 2px solid $secondary-color;
 }
+
+.text2, .about-skills-text {
+  text-align: right;
+}
+
+.about-skills-text {
+  width: 90vw;
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+
+//blocks
 
 .about-block-container {
   position: relative;
@@ -43,13 +54,57 @@
   background-color: $primary-color;
 }
 
+
+
+
+
 .about-skills-container {
   background-color: $primary-color;
+  position: relative;
   width: 100vw;
-  display: flex;
-  flex-wrap: row;
-  justify-content: space-between;
 }
+
+
+//skills table
+
+.skills-flex-container {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+
+}
+
+.skills-column h4 {margin-bottom: 1.5rem;
+  text-align: right;
+  padding-right: 5px;}
+  
+
+.skills-column {
+  flex-basis: 25%;
+}
+
+.bars-column {
+  flex-basis: 75%;
+}
+
+// skills bars
+
+.skills-bar {
+  background-color: white;
+  height: 1.5rem;
+  margin-bottom: 1rem;
+  }
+  
+  .html-bar {width: 75%;}
+  
+  .css-bar {width: 60%;}
+  
+  .js-bar {width: 40%;}
+  
+  .react-bar {width: 5%}
+
+  .sass-bar {width: 20%;}
+  
 
 
 
@@ -59,7 +114,7 @@
 
 
 //Large screens ===================================================
-@media (min-width: $xxl-media) {
+@media (min-width: $lg-media) {
 
   .about-text-container h2 {display: none;}
 
@@ -100,72 +155,46 @@ transform: translateX(150px)}
   background-color: $secondary-color;
 }
 
-.about-image-skills {
+.about-image-and-skills {
   position: relative;
   justify-self: right;
   width: 35%;
 }
 
 .about-skills-container img {
-  width: 100%;
+  height: 100%;
   display: block;
+  object-fit: cover;
+}
+
+.about-skills-container {
+  display: flex;
+  flex-wrap: row;
+  justify-content: space-between;
+  height: 50vw;
 }
 
 .about-skills-text {
 position: relative;
-width: 35%;
-padding-top: 10vh;
-padding-left: 5vw;}
+text-align: left;
+width: 35vw;
+margin: 0;
+padding: 10vh 0 0 5vw;
+}
 
-
-
-
-//Skills table ======================================
-
-.skills-flex-container{
-  margin: 15px;
+.skills-flex-container {
   position: absolute;
+  left: 50%;
   top: 60%;
-  right: 60%;
+  z-index: 1;
+}
 
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 40rem;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-}
-
-.skills-column h4 {margin-bottom: 1rem;
-text-align: right;}
 
 
 
 
-//skill bars ================================================
-
-.skills-bar {
-background-color: white;
-height: 1.5rem;
-margin-bottom: 1rem;
-}
-
-.html-bar {width: 75%;}
-
-.css-bar {width: 60%;}
-
-.js-bar {width: 40%;}
-
-.react-bar {width: 5%}
-}
 
 
 
