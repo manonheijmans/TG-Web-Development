@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+let startDate  = '2020-12-31';
+let endDate    = '2021-01-01';
+
+
+function getDays() {
+const diffInMs   = new Date(endDate) - new Date(startDate)
+const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+
+console.log(diffInDays) 
+}
+
+getDays()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      .quiz-title {
+          padding: 20px 0px;
+      }
+
+      .quiz-progress {
+        padding: 5px 0px;
+      }
+
+      .quiz-container {
+        width: 400px;
+        padding-bottom: 15px;
+        background-color: rgb(21, 129, 115);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .question-container {
+        width: 375px;
+        height: 100px;
+        margin-bottom: 12px;
+        background-color: white;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .answer-container-uneven {
+        position: relative;
+        width: 375px;
+        margin-top: -12px;
+        display: flex;
+        align-items: center;
+      }
+
+      .answer-nmbr-uneven {
+        width: 75px;
+        height: 75px;
+        position: relative;
+        left: -12px;
+        z-index: 1;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 12px solid rgb(21, 129, 115);
+      }
+
+      .answer-uneven {
+        background-color: white;
+        height: 50px;
+        width: 375px;
+        position: absolute;
+        padding-left: 75px;
+        display: flex;
+        align-items: center;
+      }
+
+      .answer-container-even {
+        position: relative;
+        width: 375px;
+        margin-top: -12px;
+        display: flex;
+        align-items: center;
+      }
+
+      .answer-nmbr-even {
+        width: 75px;
+        height: 75px;
+        position: relative;
+        left: 312px;
+        z-index: 1;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 12px solid rgb(21, 129, 115);
+      }
+
+      .answer-even {
+        background-color: white;
+        height: 50px;
+        width: 375px;
+        position: absolute;
+        padding-right: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .progress-buttons-container {
+          width: 400px;
+          display: flex;
+          justify-content: center;
+          padding-top: 6px;
+      }
+
+      .progress-button {
+          display: block;
+          height: 40px;
+          margin: 5px;
+          padding: 0 5px;
+          text-decoration: none;
+          border: none;
+          background-color: rgb(60, 175, 184);
+      }
+
+      .progress-button:hover {
+        background-color: rgb(118, 211, 218);
+      }
+
+
+    </style>
+  </head>
+  <body>
+    
+
+    <div class="quiz-container">
+      <h1 class="quiz-title">Math Problem</h1>
+      <p class="quiz-progress">1/6</p>
+
+      <div class="question-container">
+        <p class="question">question</p>
+      </div>
+
+      <div class="answer-container-uneven">
+        <p class="answer-nmbr-uneven">1</p>
+        <p class="answer-uneven">antwoord</p>
+      </div>
+
+      <div class="answer-container-even">
+        <p class="answer-nmbr-even">2</p>
+        <p class="answer-even">antwoord</p>
+      </div>
+
+      <div class="answer-container-uneven">
+        <p class="answer-nmbr-uneven">1</p>
+        <p class="answer-uneven">antwoord</p>
+      </div>
+
+      <div class="answer-container-even">
+        <p class="answer-nmbr-even">2</p>
+        <p class="answer-even">antwoord</p>
+      </div>
+
+      <div class="answer-container-uneven">
+        <p class="answer-nmbr-uneven">1</p>
+        <p class="answer-uneven">antwoord</p>
+      </div>
+     
+    </div>
+    <div class="progress-buttons-container">
+        <button class="progress-button">prev</button>
+        <button class="progress-button">next</button>
+      </div>
+  </body>
+</html>
