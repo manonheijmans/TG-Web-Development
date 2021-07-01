@@ -1,164 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
-      rel="stylesheet"
-    />
-    <title>Document</title>
-  </head>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      padding: 0;
-      margin: 0;
-    }
-
-    h1,
-    p,
-    button,
-    a {
-      font-family: "Indie Flower", cursive;
-    }
-
-    .main-container {
-      width: 400px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .start-stop-button {
-      display: block;
-      height: 40px;
-      margin: 5px;
-      padding: 0 5px;
-      text-decoration: none;
-      border: none;
-      background-color: rgb(60, 175, 184);
-    }
-
-    .quiz-container {
-      width: 400px;
-      padding-top: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: rgb(21, 129, 115);
-    }
-
-    .quiz-title {
-      padding: 20px 0px;
-    }
-
-    .quiz-progress {
-      padding: 5px 0px;
-    }
-
-    .question {
-      width: 375px;
-      height: 100px;
-      margin-bottom: 12px;
-      background-color: white;
-      border-radius: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .answer-container {
-      position: relative;
-      width: 375px;
-      margin-top: -12px;
-      display: flex;
-      align-items: center;
-    }
-
-    .answer-nmbr-odd {
-      width: 75px;
-      height: 75px;
-      position: relative;
-      left: -12px;
-      z-index: 1;
-      background-color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 12px solid rgb(21, 129, 115);
-    }
-
-    .answer {
-      background-color: white;
-      height: 50px;
-      width: 375px;
-      display: flex;
-      align-items: center;
-      position: absolute;
-    }
-
-    .answer-odd {
-      padding-left: 75px;
-    }
-
-    .answer-nmbr-even {
-      width: 75px;
-      height: 75px;
-      position: relative;
-      left: 312px;
-      z-index: 1;
-      background-color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 12px solid rgb(21, 129, 115);
-    }
-
-    .answer-even {
-      padding-right: 75px;
-      justify-content: flex-end;
-    }
-
-    .progress-button-container {
-      width: 400px;
-      display: flex;
-      justify-content: center;
-      padding-top: 6px;
-    }
-
-    .progress-button {
-      display: block;
-      height: 40px;
-      margin: 5px;
-      padding: 0 5px;
-      text-decoration: none;
-      border: none;
-      background-color: rgb(60, 175, 184);
-    }
-
-    .progress-button:hover {
-      background-color: rgb(118, 211, 218);
-    }
-
-    .green {
-      background-color: green;
-    }
-
-    .red {
-      background-color: red;
-    }
-  </style>
-  <body>
-    <div class="main-container"></div>
-
-    <script>
       let mainContainer = document.querySelector(".main-container");
 
       let activeElement;
@@ -170,8 +10,10 @@
       let correctQuestions = 0;
       let clicked = false;
 
-    
-      //tijdelijk om in te werken
+      let answerElements 
+      let answersElementsArr 
+
+
 
       //start page ============================================================================
 
@@ -258,9 +100,6 @@
       let nextButton = document.createElement("button");
       nextButton.innerHTML = "volgende";
       nextButton.classList.add("progress-button");
-
-
- 
 
       // event listeners ========================================================================
       startButton.addEventListener("click", startQuiz);
@@ -397,14 +236,12 @@
       answer4.innerHTML = quizArr[progressNmbr].answers.d;
       answer5.innerHTML = quizArr[progressNmbr].answers.e;
 
- 
-
       //functions ============================================================
 
       function nextPage() {
         if (pageNmbr < 6) {
-
           clearMarkUp();
+          clicked = false; 
 
           progressNmbr++;
           pageNmbr++;
@@ -416,7 +253,6 @@
           answer4.innerHTML = quizArr[progressNmbr].answers.d;
           answer5.innerHTML = quizArr[progressNmbr].answers.e;
         }
-  
       }
 
       function prevPage() {
@@ -433,6 +269,38 @@
         }
       }
 
+      function retrieveAnswers() {
+      answerElements = quizContainer.querySelectorAll(".answer");
+      answerElementsArr = Array.from(answerElements);
+      answerElementsArr.forEach(getCorrectAnswer);      
+      }
+
+      function getCorrectAnswer(element) {
+        let answerToCheck = element.innerHTML;
+
+        if (answerToCheck == quizArr[progressNmbr].correctAnswer) {
+          actualAnswer = element;
+        }
+      }
+      
+      function checkAnswer() {
+        activeElement = this;
+        givenAnswer = this.innerHTML;
+
+        if (clicked == false) {
+          clicked = true;
+
+          if (givenAnswer == quizArr[progressNmbr].correctAnswer) {
+            answerCorrect = true;
+            questionCount();
+          } else {
+            answerCorrect = false;
+            retrieveAnswers();
+          }
+          answerMarkUp();
+        }
+      }
+      
       //works
       function questionCount() {
         correctQuestions++;
@@ -448,64 +316,25 @@
         if (answerCorrect == false) {
           activeElement.classList.add("red");
           activeElement.previousElementSibling.classList.add("red");
-          // actual answer turns green
+          actualAnswer.classList.add("green");
+          actualAnswer.previousElementSibling.classList.add("green");
+  
         }
       }
 
       function clearMarkUp() {
         activeElement.classList.remove("red", "green");
         activeElement.previousElementSibling.classList.remove("red", "green");
+        actualAnswer.classList.remove("red", "green");
+        actualAnswer.previousElementSibling.classList.remove("red", "green");
       }
 
+    
 
-      function checkAnswer() {
-        activeElement = this;
-        givenAnswer = this.innerHTML;
+      //Hier verder gaan
 
-        if (clicked == false) {
-          clicked = true;
-
-          if (givenAnswer == quizArr[progressNmbr].correctAnswer) {
-            answerCorrect = true;
-            questionCount();
-          } else {
-            answerCorrect = false;
-          }
-          answerMarkUp();
-        }
-      }
-
-
-      //Hier verder gaan 
-
-      function checkActualAnswer(element) {
-        if (element == quizArr[progressNmbr].correctAnswer) {
-          consol.log("pika")
-        }
-      }
-
-
-  
-
-
-      //tijdelijk 
-        mainQuiz();
-        
-        
-
-
-     //variabeles after initialising page 
-        let test = quizContainer.querySelectorAll(".answer")
-        let testArr = Array.from(test)
-
-        checkActualAnswer()
-      
-
-
-
-
-
-
+      //tijdelijk
+      mainQuiz();
 
       //hij wordt uiteindelijk hier getriggerd
       function startQuiz() {
@@ -516,20 +345,3 @@
 
 
 
-  //  let test = quizContainer.querySelectorAll(".answer")
-  //  let testArr = Array.from(test)
-  //  console.log(test)
-  //  console.log(testArr)
-
-   // let totalAnswers = Object.keys(quizArr[progressNmbr].answers).length
-        // for (let i = 0; i < totalAnswers; i++) {
-        // }
-
-        // console.log(test)
-        // console.log(testArr)
-
-
-
-    </script>
-  </body>
-</html>
