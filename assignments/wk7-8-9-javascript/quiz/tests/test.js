@@ -1,5 +1,15 @@
+       
+      // werkt vooralsnog alleen vooruit. hoe voeg ik de laatste functionaliteit toe? (switch?)
+      // 
+      //waar ik nog meer naar kan kijken: 
+      // automatiseren van creëren en toevoegen answers en bijbehorende elementen / event listeners (loop of forEach?)
+      // insert HTML in een functie?     
 
-      let mainContainer = document.querySelector(".main-container");
+
+
+      // variables ===========================================================================
+      
+      const mainContainer = document.querySelector(".main-container");
 
       let activeElement;
 
@@ -8,10 +18,13 @@
       let answerCorrect;
 
       let correctQuestions = 0;
-      let clicked = false;
+      let answered = false;
 
-      let answerElements 
-      let answersElementsArr 
+      let questionIndex = 0;
+      let pageNmbr = 1;
+
+      let pagesArr = []
+
 
 
 
@@ -19,7 +32,9 @@
 
       let startButton = document.createElement("button");
       startButton.innerHTML = "Start";
-      startButton.classList.add("start-stop-button");
+      startButton.classList.add("start-restart-button");
+
+
 
       // main quiz page framework =============================================================
 
@@ -33,6 +48,9 @@
 
       let question = document.createElement("p");
       question.classList.add("question");
+
+
+      // answers ==============================================================================
 
       //answer 1
       let answerContainer1 = document.createElement("div");
@@ -89,21 +107,37 @@
       let answer5 = document.createElement("p");
       answer5.classList.add("answer", "answer", "answer-odd");
 
-      //progress buttons
+
+
+      //progress buttons ===================================================
+
       let buttonContainer = document.createElement("div");
       buttonContainer.classList.add("progress-button-container");
 
-      let prevButton = document.createElement("button");
-      prevButton.innerHTML = "vorige";
-      prevButton.classList.add("progress-button");
+      // let prevButton = document.createElement("button");
+      // prevButton.innerHTML = "vorige";
+      // prevButton.classList.add("progress-button");
 
       let nextButton = document.createElement("button");
-      nextButton.innerHTML = "volgende";
+      nextButton.innerHTML = "Volgende";
       nextButton.classList.add("progress-button");
 
+
+      // end page ==========================================================
+
+      let endResult = document.createElement("h2");
+      endResult.classList.add("score-container");
+
+      let restartButton = document.createElement("button");
+      restartButton.innerText = "Restart";
+      restartButton.classList.add("start-restart-button")
+
+
       // event listeners ========================================================================
+
       startButton.addEventListener("click", startQuiz);
-      prevButton.addEventListener("click", prevPage);
+      restartButton.addEventListener("click", restartQuiz)
+      // prevButton.addEventListener("click", prevPage);
       nextButton.addEventListener("click", nextPage);
 
       answer1.addEventListener("click", checkAnswer);
@@ -112,47 +146,8 @@
       answer4.addEventListener("click", checkAnswer);
       answer5.addEventListener("click", checkAnswer);
 
-      //main quiz page framework ================================================================
 
-      function mainQuiz() {
-        mainContainer.appendChild(quizContainer);
-        quizContainer.appendChild(title);
-        quizContainer.appendChild(progress);
-        quizContainer.appendChild(question);
-
-        //answer 1
-        quizContainer.appendChild(answerContainer1);
-        answerContainer1.appendChild(answerNmbr1);
-        answerContainer1.appendChild(answer1);
-
-        // answer 2
-        quizContainer.appendChild(answerContainer2);
-        answerContainer2.appendChild(answerNmbr2);
-        answerContainer2.appendChild(answer2);
-
-        // answer 3
-        quizContainer.appendChild(answerContainer3);
-        answerContainer3.appendChild(answerNmbr3);
-        answerContainer3.appendChild(answer3);
-
-        // answer 4
-        quizContainer.appendChild(answerContainer4);
-        answerContainer4.appendChild(answerNmbr4);
-        answerContainer4.appendChild(answer4);
-
-        // answer 5
-        quizContainer.appendChild(answerContainer5);
-        answerContainer5.appendChild(answerNmbr5);
-        answerContainer5.appendChild(answer5);
-
-        // next prev buttons
-
-        mainContainer.appendChild(buttonContainer);
-        buttonContainer.appendChild(prevButton);
-        buttonContainer.appendChild(nextButton);
-      }
-
-      // quiz answers ====================================================
+      // quiz answers ===========================================================================
 
       const quizArr = [
         {
@@ -223,49 +218,113 @@
         },
       ];
 
-      //insert HTML ==========================================================
 
-      let progressNmbr = 0;
-      let pageNmbr = 1;
 
-      progress.innerHTML = pageNmbr + "/6";
-      question.innerHTML = quizArr[progressNmbr].question;
-      answer1.innerHTML = quizArr[progressNmbr].answers.a;
-      answer2.innerHTML = quizArr[progressNmbr].answers.b;
-      answer3.innerHTML = quizArr[progressNmbr].answers.c;
-      answer4.innerHTML = quizArr[progressNmbr].answers.d;
-      answer5.innerHTML = quizArr[progressNmbr].answers.e;
+//functions ===============================================================================
 
-      //functions ============================================================
+      //insert HTML ============================================================================
+
+
+      function insertContent(){
+      progress.innerHTML = pageNmbr + "/" + quizArr.length;
+      question.innerHTML = quizArr[questionIndex].question;
+      answer1.innerHTML = quizArr[questionIndex].answers.a;
+      answer2.innerHTML = quizArr[questionIndex].answers.b;
+      answer3.innerHTML = quizArr[questionIndex].answers.c;
+      answer4.innerHTML = quizArr[questionIndex].answers.d;
+      answer5.innerHTML = quizArr[questionIndex].answers.e;
+      }
+
+      //main quiz page framework ================================================================
+
+      function quizBuilder() {
+        mainContainer.appendChild(quizContainer);
+        quizContainer.appendChild(title);
+        quizContainer.appendChild(progress);
+        quizContainer.appendChild(question);
+
+        //answer 1
+        quizContainer.appendChild(answerContainer1);
+        answerContainer1.appendChild(answerNmbr1);
+        answerContainer1.appendChild(answer1);
+
+        // answer 2
+        quizContainer.appendChild(answerContainer2);
+        answerContainer2.appendChild(answerNmbr2);
+        answerContainer2.appendChild(answer2);
+
+        // answer 3
+        quizContainer.appendChild(answerContainer3);
+        answerContainer3.appendChild(answerNmbr3);
+        answerContainer3.appendChild(answer3);
+
+        // answer 4
+        quizContainer.appendChild(answerContainer4);
+        answerContainer4.appendChild(answerNmbr4);
+        answerContainer4.appendChild(answer4);
+
+        // answer 5
+        quizContainer.appendChild(answerContainer5);
+        answerContainer5.appendChild(answerNmbr5);
+        answerContainer5.appendChild(answer5);
+
+        // next prev buttons
+
+        mainContainer.appendChild(buttonContainer);
+        // buttonContainer.appendChild(prevButton);
+        buttonContainer.appendChild(nextButton);
+        
+        insertContent();
+
+      }
+
+      // navigation functions ===================================================================
 
       function nextPage() {
-        if (pageNmbr < 6) {
+        if ((pageNmbr < quizArr.length) && (answered == true)) {
           clearMarkUp();
-          clicked = false; 
+          answered = false; 
 
-          progressNmbr++;
+          questionIndex++;
           pageNmbr++;
-          progress.innerHTML = pageNmbr + "/6";
-          question.innerHTML = quizArr[progressNmbr].question;
-          answer1.innerHTML = quizArr[progressNmbr].answers.a;
-          answer2.innerHTML = quizArr[progressNmbr].answers.b;
-          answer3.innerHTML = quizArr[progressNmbr].answers.c;
-          answer4.innerHTML = quizArr[progressNmbr].answers.d;
-          answer5.innerHTML = quizArr[progressNmbr].answers.e;
+
+          quizContainer.remove();
+          quizBuilder(); 
+        }
+
+        if ((pageNmbr == 6) && (answered == true)){
+          showResults()
         }
       }
 
-      function prevPage() {
-        if (pageNmbr > 1) {
-          progressNmbr--;
-          pageNmbr--;
-          progress.innerHTML = pageNmbr + "/6";
-          question.innerHTML = quizArr[progressNmbr].question;
-          answer1.innerHTML = quizArr[progressNmbr].answers.a;
-          answer2.innerHTML = quizArr[progressNmbr].answers.b;
-          answer3.innerHTML = quizArr[progressNmbr].answers.c;
-          answer4.innerHTML = quizArr[progressNmbr].answers.d;
-          answer5.innerHTML = quizArr[progressNmbr].answers.e;
+      // function prevPage() {
+      //   if (pageNmbr > 1) {
+      //     questionIndex--;
+      //     pageNmbr--;
+      //   
+
+      // }
+
+
+
+      // quiz functionality ===========================================================================
+
+      function checkAnswer() {
+        activeElement = this;
+        givenAnswer = this.innerHTML;
+
+        if (answered == false) {
+          answered = true;
+
+          if (givenAnswer == quizArr[questionIndex].correctAnswer) {
+            answerCorrect = true;
+            correctQuestionCount();
+
+          } else {
+            answerCorrect = false;
+            retrieveAnswers();
+          }
+          answerMarkUp();
         }
       }
 
@@ -278,39 +337,22 @@
       function getCorrectAnswer(element) {
         let answerToCheck = element.innerHTML;
 
-        if (answerToCheck == quizArr[progressNmbr].correctAnswer) {
+        if (answerToCheck == quizArr[questionIndex].correctAnswer) {
           actualAnswer = element;
         }
       }
       
-      function checkAnswer() {
-        activeElement = this;
-        givenAnswer = this.innerHTML;
-
-        if (clicked == false) {
-          clicked = true;
-
-          if (givenAnswer == quizArr[progressNmbr].correctAnswer) {
-            answerCorrect = true;
-            questionCount();
-          } else {
-            answerCorrect = false;
-            retrieveAnswers();
-          }
-          answerMarkUp();
-        }
-      }
       
-      //works
-      function questionCount() {
+      
+      function correctQuestionCount() {
         correctQuestions++;
-        console.log(correctQuestions);
       }
 
       function answerMarkUp() {
         if (answerCorrect == true) {
           activeElement.classList.add("green");
           activeElement.previousElementSibling.classList.add("green");
+          actualAnswer = activeElement
         }
 
         if (answerCorrect == false) {
@@ -329,19 +371,66 @@
         actualAnswer.previousElementSibling.classList.remove("red", "green");
       }
 
-    
+      function showResults(){
+        quizContainer.remove();
+        nextButton.remove();
 
-      //Hier verder gaan
-
-      //tijdelijk
-      mainQuiz();
-
-      //hij wordt uiteindelijk hier getriggerd
-      function startQuiz() {
-        startButton.remove();
-        mainQuiz();
+        mainContainer.append(endResult);
+        endResult.innerText = "Je hebt " + correctQuestions + " van de " + quizArr.length + " vragen goed!"
+        mainContainer.append(restartButton)
       }
 
+
+
+      //start and stop functions ==================================================================
+
+      function startScreen() {
+        mainContainer.append(startButton)
+      }
+
+      function startQuiz() {
+        startButton.remove();
+        quizBuilder();
+      }
+
+      function restartQuiz(){
+        endResult.remove();
+        restartButton.remove();
+        clearMarkUp()
+        startScreen();
+        answered = false;   
+        correctAnswers = 0;
+        pageNmbr = 1
+        questionIndex = 0
+      }
+
+
+      //make it rain =============================================================================
+
+      startScreen()
+
+
+
+
+
+
+   
+
+
+
+
+
+
+      /* create 6 quiz-container divs met separate id's 
+      replace quiz-container voor next of previous one 
+      en add inner html
+      
+      let op: separate quizbuilder from questionbuilder, want previous next knop
+      en wanneer builden, al aan het begin of as we go? 
+      object keys voor lengte van vragenarray? */
+
+
+   
 
 
 

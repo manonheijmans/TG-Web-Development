@@ -18,10 +18,7 @@
       let answerCorrect;
 
       let correctQuestions = 0;
-      let clicked = false;
-
-      let answerElements 
-      let answersElementsArr 
+      let answered = false;
 
       let questionIndex = 0;
       let pageNmbr = 1;
@@ -219,26 +216,25 @@
       ];
 
 
+
+//functions ===============================================================================
+
       //insert HTML ============================================================================
 
-      progress.innerHTML = pageNmbr + "/6";
+
+      function insertContent(){
+      progress.innerHTML = pageNmbr + "/" + quizArr.length;
       question.innerHTML = quizArr[questionIndex].question;
       answer1.innerHTML = quizArr[questionIndex].answers.a;
       answer2.innerHTML = quizArr[questionIndex].answers.b;
       answer3.innerHTML = quizArr[questionIndex].answers.c;
       answer4.innerHTML = quizArr[questionIndex].answers.d;
       answer5.innerHTML = quizArr[questionIndex].answers.e;
-
-
-
-
-
-      //functions ===============================================================================
-
+      }
 
       //main quiz page framework ================================================================
 
-      function mainQuiz() {
+      function quizBuilder() {
         mainContainer.appendChild(quizContainer);
         quizContainer.appendChild(title);
         quizContainer.appendChild(progress);
@@ -274,30 +270,29 @@
         mainContainer.appendChild(buttonContainer);
         // buttonContainer.appendChild(prevButton);
         buttonContainer.appendChild(nextButton);
+        
+        insertContent()
       }
 
+      // navigation functions ===================================================================
 
       function nextPage() {
-        if ((pageNmbr < 6) && (clicked == true)) {
+        if ((pageNmbr < quizArr.length) && (answered == true)) {
           clearMarkUp();
-          clicked = false; 
+          answered = false; 
 
           questionIndex++;
           pageNmbr++;
-          progress.innerHTML = pageNmbr + "/6";
-          question.innerHTML = quizArr[questionIndex].question;
-          answer1.innerHTML = quizArr[questionIndex].answers.a;
-          answer2.innerHTML = quizArr[questionIndex].answers.b;
-          answer3.innerHTML = quizArr[questionIndex].answers.c;
-          answer4.innerHTML = quizArr[questionIndex].answers.d;
-          answer5.innerHTML = quizArr[questionIndex].answers.e;
+          //remove progressArr[questionIndex-1]
+          //add progressArr[questionIndex]
+          //wellicht met quizBuilder?
+          insertContent();
         }
 
-        if ((pageNmbr == 6) && (clicked == true)){
+        if ((pageNmbr == 6) && (answered == true)){
           showResults()
         }
       }
-
 
       // function prevPage() {
       //   if (pageNmbr > 1) {
@@ -314,6 +309,28 @@
       // }
 
 
+
+      // quiz functionality ===========================================================================
+
+      function checkAnswer() {
+        activeElement = this;
+        givenAnswer = this.innerHTML;
+
+        if (answered == false) {
+          answered = true;
+
+          if (givenAnswer == quizArr[questionIndex].correctAnswer) {
+            answerCorrect = true;
+            correctQuestionCount();
+
+          } else {
+            answerCorrect = false;
+            retrieveAnswers();
+          }
+          answerMarkUp();
+        }
+      }
+
       function retrieveAnswers() {
       answerElements = quizContainer.querySelectorAll(".answer");
       answerElementsArr = Array.from(answerElements);
@@ -328,28 +345,10 @@
         }
       }
       
-      function checkAnswer() {
-        activeElement = this;
-        givenAnswer = this.innerHTML;
-
-        if (clicked == false) {
-          clicked = true;
-
-          if (givenAnswer == quizArr[questionIndex].correctAnswer) {
-            answerCorrect = true;
-            questionCount();
-
-          } else {
-            answerCorrect = false;
-            retrieveAnswers();
-          }
-          answerMarkUp();
-        }
-      }
       
-      function questionCount() {
+      
+      function correctQuestionCount() {
         correctQuestions++;
-        console.log(correctQuestions);
       }
 
       function answerMarkUp() {
@@ -380,7 +379,7 @@
         nextButton.remove();
 
         mainContainer.append(endResult);
-        endResult.innerText = "Je hebt " + correctQuestions + " vragen goed!"
+        endResult.innerText = "Je hebt " + correctQuestions + " van de " + quizArr.length + " vragen goed!"
         mainContainer.append(restartButton)
       }
 
@@ -394,7 +393,7 @@
 
       function startQuiz() {
         startButton.remove();
-        mainQuiz();
+        quizBuilder();
       }
 
       function restartQuiz(){
@@ -402,7 +401,7 @@
         restartButton.remove();
         clearMarkUp()
         startScreen();
-        clicked = false;   
+        answered = false;   
         correctAnswers = 0;
         pageNmbr = 1
         questionIndex = 0
@@ -414,8 +413,11 @@
       startScreen()
 
 
+
+
+
+
    
 
 
 
-    
