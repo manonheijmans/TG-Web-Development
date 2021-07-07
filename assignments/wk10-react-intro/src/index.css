@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.assignments-container {
+  text-align: center;
+}
+
+.assignment1-container {
+  background-color: rgb(230, 227, 217);
+}
+
+hr {border-top: 1px solid white}
