@@ -1,6 +1,6 @@
 import React from 'react';
 import weathercardbackground from '../images/weathercardbackground.png';
-import WeatherIconConverter from './WeatherIconConverter'
+import WeatherIconConverter from './tools/IconConverter'
 
 export default function WeatherCard({ weatherData }) {
  
@@ -13,9 +13,9 @@ export default function WeatherCard({ weatherData }) {
         <div className="weather-card-info">
 
       
+      <div className="icon">
          <WeatherIconConverter iconId={weatherData.weather[0].id}/>
-
-            {/* <img src={`${process.env.REACT_APP_ICON_URL}${weatherData.weather[0].icon}@4x.png`} alt="icon" /> */}
+      </div>
     
          <div className="text-container">
          <p>{weatherData.name}, {weatherData.sys.country}</p>

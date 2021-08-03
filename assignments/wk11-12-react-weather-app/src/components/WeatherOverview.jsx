@@ -5,6 +5,7 @@ import WeatherCard from "./WeatherCard";
 export default function WeatherOverview({ city }) {
 
     const [data, setData] = useState([]);
+   
  
     useEffect(() => {
         fetch(
@@ -17,6 +18,7 @@ export default function WeatherOverview({ city }) {
          });
      },
      [city]);
+
 
    return (
      <div className="App">
