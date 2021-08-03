@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function DateComponent({ weatherData }) {
+export default function DateDisplay({ weatherData }) {
 
     const unixTime = backData.current.dt;
     const date = new Date(unixTime*1000);

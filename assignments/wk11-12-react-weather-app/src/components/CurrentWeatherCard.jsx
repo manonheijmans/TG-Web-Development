@@ -21,13 +21,13 @@ export default function CurrentWeatherCard({ city }) {
 
 
     return (
-        <div className="weather-card-front">
+        <div className="current-weather-card">
             {typeof currentData.main != "undefined" ? (
 
                 <div className="weather-card-container">
 
                     <img className="background-image" src={weathercardbackground} alt="background" />
-
+                    <div className="background-image-overlay"></div>
                     <div className="weather-card-info">
 
 
@@ -40,8 +40,8 @@ export default function CurrentWeatherCard({ city }) {
 
                             <hr />
                             <p className="temperature-main">{currentData.main.temp.toFixed(1)}C°</p>
-                            <p>min temp: {currentData.main.temp_min.toFixed(1)}C°</p>
-                            <p>max temp: {currentData.main.temp_max.toFixed(1)}C°</p>
+                            <p>min: {currentData.main.temp_min.toFixed(1)}C°</p>
+                            <p>max: {currentData.main.temp_max.toFixed(1)}C°</p>
                             <p>humidity: {currentData.main.humidity.toFixed(1)}%</p>
                         </div>
                     </div>
