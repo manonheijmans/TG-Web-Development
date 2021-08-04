@@ -94,6 +94,7 @@ body {
 }
 .accordion-title {
   font-weight: 600;
+  width: 280px;
   cursor: pointer;
   background-color: rgb(151,91,111, 0.5);
   padding: 0.5em 1.5em;
@@ -120,6 +121,7 @@ body {
   border-bottom: 5px solid;
 }
 .accordion-content {
+  width: 280px;
   padding: 1em 1.5em;
   background-color: rgb(151,91,111, 0.5);
  

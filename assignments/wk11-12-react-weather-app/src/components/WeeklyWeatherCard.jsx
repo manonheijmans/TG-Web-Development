@@ -20,16 +20,25 @@ export default function WeeklyWeatherCard({ city }) {
   },
     [city]);
 
-  function DateDisplay() {
-    const unixTime = weeklyData.daily[0].dt;
+    const dailyArray = weeklyData.daily
+    // console.log(dailyArray)
+
+        
+
+  function DateDisplay({param}) {
+    const unixTime = param.dt;
     const date = new Date(unixTime * 1000);
 
     return date.toLocaleDateString()
 
   }
 
-  const dailyArray = weeklyData.daily
-  console.log(dailyArray)
+  // let ceos = ['Sundar', 'Mark', 'Tim', 'Jeff'];
+
+  // ceos.map((ceo, index) => console.log(`The ${index} is ${ceo}`));
+
+  
+
 
 
   return (
@@ -37,36 +46,42 @@ export default function WeeklyWeatherCard({ city }) {
       {typeof weeklyData.daily != "undefined" ? (
 
         <div>
-          <div class="weekly-weather-card">
+
+         
             <div className="weather-card-container">
               <img className="background-image" src={weathercardbackground} alt="background" />
 
               <div className="weather-card-info">
 
                 <div className="accordion-wrapper">
+                {dailyArray.map((x, index) => <div>
+
+
                   <div
                     className={`accordion-title ${isOpen ? "open" : ""}`}
                     onClick={() => setOpen(!isOpen)}
                   >
+
+                    
                     <p className="title">
-                      <DateDisplay />
-                      <IconConverter iconId={weeklyData.daily[0].weather[0].id} />
+                      <DateDisplay param={x}/>
+                      <IconConverter iconId={x.weather[0].id} />
                     </p>
 
 
                   </div>
                   <div className={`accordion-item ${!isOpen ? "collapsed" : ""}`}>
                     <div className="accordion-content">
-                      <p>morning: {weeklyData.daily[0].temp.morn.toFixed(1)}C°</p>
-                      <p>afternoon: {weeklyData.daily[0].temp.day.toFixed(1)}C°</p>
-                      <p>evening: {weeklyData.daily[0].temp.eve.toFixed(1)}C°</p>
-                      <p>night: {weeklyData.daily[0].temp.night.toFixed(1)}C°</p>
+                      <p>morning: {x.temp.morn.toFixed(1)}C°</p>
+                      <p>afternoon: {x.temp.day.toFixed(1)}C°</p>
+                      <p>evening: {x.temp.eve.toFixed(1)}C°</p>
+                      <p>night: {x.temp.night.toFixed(1)}C°</p>
                     </div>
                   </div>
+                  </div>)}
                 </div>
               </div>
             </div>
-          </div>
         </div>  
       ) : (
         <div></div>
