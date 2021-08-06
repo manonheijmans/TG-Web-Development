@@ -8,7 +8,7 @@ export default function CurrentWeatherCard({ city }) {
 
     useEffect(() => {
         fetch(
-            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=bd2eba57d16153bcc8d30de6e03da549&units=metric`
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}&units=metric`
         )
             .then((res) => res.json())
             .then((result) => {
