@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import WeeklyWeatherAccordion from './WeeklyWeatherAccordion';
 import weathercardbackground from '../images/weathercardbackground.png'
 
+
 export default function WeeklyWeatherCard({ lat, lon }) {
 
   const [weeklyData, setWeeklyData] = useState([]);

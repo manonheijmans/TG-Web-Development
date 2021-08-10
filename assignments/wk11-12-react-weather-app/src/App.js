@@ -1,7 +1,6 @@
 import "./App.css";
 import React from "react";
 import WeatherOverview from "./components/WeatherOverview";
-// import WeatherForecast from "./components/WeatherForecast"
 
 
 function App() {

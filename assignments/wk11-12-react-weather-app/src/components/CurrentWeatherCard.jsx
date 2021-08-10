@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import weathercardbackground from '../images/weathercardbackground.png'
 import IconConverter from './tools/IconConverter'
+import DayNightChecker from './tools/DayNightChecker';
 
 export default function CurrentWeatherCard({ city }) {
 
@@ -17,11 +18,11 @@ export default function CurrentWeatherCard({ city }) {
     },
         [city]);
 
+        console.log(currentData.dt)
         
     return (
         <div className="current-weather-card">
             {typeof currentData.main != "undefined" ? (
-
                 <div className="weather-card-container">
                     <img className="background-image" src={weathercardbackground} alt="background" />
                     <div className="background-image-overlay"></div>
@@ -29,7 +30,10 @@ export default function CurrentWeatherCard({ city }) {
                         <div className="icon">
                             <IconConverter iconId={currentData.weather[0].id} />
                         </div>
+                        
                         <div className="text-container">
+                        <p><DayNightChecker localTime={currentData.dt}/></p>
+
                             <p>{currentData.name}, {currentData.sys.country}</p>
                             <hr />
                             <p className="temperature-main">{currentData.main.temp.toFixed(1)}C°</p>
@@ -38,7 +42,9 @@ export default function CurrentWeatherCard({ city }) {
                             <p>humidity: {currentData.main.humidity.toFixed(1)}%</p>
                         </div>
                     </div>
+
                 </div>
+                
 
             ) : (
 
