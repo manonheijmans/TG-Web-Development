@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import DateConverter from './tools/DateConverter'
+import { convertDate } from '../utilities/convertDate'
 import IconConverter from './tools/IconConverter'
 
 export default function WeeklyWeatherAccordion({ item, i }) {
@@ -15,7 +15,7 @@ export default function WeeklyWeatherAccordion({ item, i }) {
     return (
         <div className="accordion-item">
             <div className="accordion-title" onClick={() => toggle(i)}>
-                <p><DateConverter index={item} /></p>
+                <p>{convertDate(item)}</p>
                 <p><IconConverter iconId={item.weather[0].id} /></p>
                 <p><span>{item.temp.min.toFixed(0)}/{item.temp.max.toFixed(0)}°C</span></p>
                 <p>{clicked === i ? "-" : "+"}</p>

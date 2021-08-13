@@ -16,10 +16,11 @@ export default function DayNightChecker({ localTime }) {
     }, []);
 
 
-    return (
-       <div>{viewMode}</div>
-    )
+    return viewMode 
 }
+
+
+// logica uit component in app.js zetten 
 
 
 
