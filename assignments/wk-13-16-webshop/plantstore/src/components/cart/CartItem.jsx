@@ -6,6 +6,10 @@ import {
   removeFromCart,
 } from "../../redux/Shopping/shopping-actions";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+
+
 const CartItem = ({ item, adjustQty, removeFromCart }) => {
   const [input, setInput] = useState(item.qty);
 
@@ -18,7 +22,7 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
     <div className="cart-item">
       <img
         className={"cart-item-image"}
-        src={item.image}
+        src={item.images.main.url}
         alt={item.title}
       />
       <div className="cart-item-details">
@@ -40,12 +44,11 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
         </div>
         <button
           onClick={() => removeFromCart(item.id)}
-          className="delete-from-cart-button"
         >
-          <img
-            src="https://image.flaticon.com/icons/svg/709/709519.svg"
-            alt=""
-          />
+         
+         <FontAwesomeIcon icon={faTrash} />
+
+       
         </button>
       </div>
     </div>

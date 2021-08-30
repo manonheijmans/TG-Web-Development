@@ -29,7 +29,7 @@ import Navbar from "./components/Navbar";
 
 
 
-function App({ current }) {
+function App({current}) {
   return (
     <Router>
       <div className="app">

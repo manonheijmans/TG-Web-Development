@@ -10,10 +10,36 @@ const INITIAL_STATE = {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 
       price: 15.0,
-      image:
-        "https://cdn.shopify.com/s/files/1/0250/0329/4765/products/Schwiegermutterzunge_s2_720x.jpg?v=1574113261",
+      images: {
+        main: { 
+            id: 1,
+            url: "../assets/images/sanseveria_main.jpg"
+          },
+        details: [{
+          imageId: 1,
+          url: "../assets/images/sanseveria_main.jpg",
+        },
+        {
+          imageId: 2,
+          url: "../assets/images/sanseveria_detail1.jpg",
+        },
+        {
+          imageId: 3,
+          url: "../assets/images/sanseveria_detail2.jpg"
+        },
+        {
+          imageId: 4,
+          url: "../assets/images/sanseveria_detail3.jpg"
+        }
+      ]},
+      productDetails: {
+        width: 20,
+        height: 40,
+        benefits: "aircleaner",
+        shade: "sunny"
+      }
     },
-    {
+      {
       id: 2,
       title: "Philodendron Scandens",
       caption:
@@ -21,8 +47,29 @@ const INITIAL_STATE = {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 
       price: 20.0,
-      image:
-        "https://cdn.shopify.com/s/files/1/0250/0329/4765/products/philo_action_720x.jpg?v=1621505659",
+      images: {
+        main: { 
+            ImageId: 1,
+            url: "../assets/images/philo_scandens_main.jpg"
+          },
+        details: [
+          {
+          imageId: 1,
+          url: "../assets/images/philo_scandens_main.jpg",
+        },
+        {
+          imageId: 2,
+          url: "../assets/images/philo_scandens_detail1.jpg",
+        },
+        {
+          imageId: 3,
+          url: "../assets/images/philo_scandens_detail2.jpg"
+        },
+        {
+          imageId: 4,
+          url: "../assets/images/philo_scandens_detail3.jpg"
+        }
+      ]}
     },
     {
       id: 3,
@@ -32,8 +79,118 @@ const INITIAL_STATE = {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 
       price: 25,
-      image:
-        "https://cdn.shopify.com/s/files/1/0250/0329/4765/products/GrosseMonstera_11_720x.jpg?v=1624797390"
+      images: {
+        main: { 
+          imaggeId: 1,
+            url: "../assets/images/monstera_main.jpg"
+          },
+        details: [{
+          imageId: 1,
+          url: "../assets/images/monstera_main.jpg",
+        },
+        {
+          imageId: 2,
+          url: "../assets/images/monstera_detail1.jpg",
+        },
+        {
+          imageId: 3,
+          url: "../assets/images/monstera_detail2.jpg"
+        },
+        {
+          imageId: 4,
+          url: "../assets/images/monstera_detail3.jpg"
+        }
+      ]}
+    },
+    {
+      id: 4,
+      title: "Scindapsus Pictus",
+      caption:
+        "Koop deze ook.",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+
+      price: 15,
+      images: {
+        main: { 
+          imageId: 1,
+            url: "../assets/images/scindapsus_pictus_main.jpg"
+          },
+        details: [{
+          imageId: 1,
+          url: "../assets/images/scindapsus_pictus_main.jpg",
+        },
+        {
+          imageId: 2,
+          url: "../assets/images/scindapsus_pictus_detail1.jpg",
+        },
+        {
+          imageId: 3,
+          url: "../assets/images/scindapsus_pictus_detail2.jpg"
+        },
+        {
+          imageId: 4,
+          url: "../assets/images/scindapsus_pictus_detail3.jpg"
+        }
+      ]}
+    },
+    {
+      id: 5,
+      title: "Cactus Trio",
+      caption:
+        "Heel cute zijn deze.",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+
+      price: 10,
+      images: {
+        main: { 
+          imageId: 1,
+            url: "../assets/images/cactus_trio_main.jpg"
+          },
+        details: [{
+          imageId: 1,
+          url: "../assets/images/cactus_trio_main.jpg",
+        },
+        {
+          imageId: 2,
+          url: "../assets/images/cactus_trio_detail1.jpg",
+        },
+        {
+          imageId: 3,
+          url: "../assets/images/cactus_trio_detail2.jpg"
+        },
+        {
+          imageId: 4,
+          url: "../assets/images/cactus_trio_detail3.jpg"
+        }
+      ]}
+    },
+    {
+      id: 6,
+      title: "Hoya Kerri",
+      caption:
+        "Koop deze.",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+
+      price: 25,
+      images: {
+        main: { 
+          imageId: 1,
+            url: "../assets/images/hoya_kerri_main.jpg"
+          },
+        details: [
+          { 
+            imageId: 1,
+              url: "../assets/images/hoya_kerri_main.jpg"
+            }, 
+          {
+          imageId: 2,
+          url: "../assets/images/hoya_kerri_detail1.jpg",
+        },
+        {
+          imageId: 3,
+          url: "../assets/images/hoya_kerri_detail2.jpg"
+        },
+      ]}
     },
   ],
   cart: [],

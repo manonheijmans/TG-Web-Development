@@ -17,7 +17,7 @@ const Product = ({ product, addToCart, loadCurrentItem }) => {
       <img
       onClick={() => loadCurrentItem(product)}
         className="product-card-image"
-        src={product.image}
+        src={product.images.main.url}
         alt={product.title}
       />
       </Link>
