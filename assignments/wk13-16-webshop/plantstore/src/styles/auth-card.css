@@ -1,0 +1,109 @@
+a {
+    text-decoration: none;
+}
+
+a:visited { 
+    text-decoration: none; color:black; 
+}
+
+a:hover, a:active { 
+    text-decoration: none; color:black 
+}
+
+.auth-form {
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+.auth-container{
+    max-width: 400px;
+    margin: 25vh auto;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+}
+
+.auth-card-content{
+    padding: 12px 44px;
+}
+
+.auth-container h2 {
+    text-align: center;
+}
+
+
+.auth-container label {
+    margin-top: 5px;
+}
+
+.auth-container input {
+    border: none;
+    border-bottom: var(--accent) 1px solid;
+    outline: none;
+    padding-top: 14px;
+  }
+
+
+.button{
+  background: var(--primary);
+  border: none;
+  border-bottom: var(--accent) 3px solid;
+  cursor: pointer;
+  color: white;
+  font-family: "Raleway SemiBold", sans-serif;
+  height: 42px;
+  margin: 50px auto 10px auto;
+  transition: 0.25s;
+  width: 153px;
+}
+
+.auth-container button:hover {
+    background: var(--accent);
+}
+
+.forgot-password{
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.auth-card-redirect{
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+.close-button{
+        border: 0;
+        color: white;
+        background-color: white;
+        font-family: system-ui, sans-serif;
+        text-decoration: none;
+      
+}
+
+.close {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  
+
