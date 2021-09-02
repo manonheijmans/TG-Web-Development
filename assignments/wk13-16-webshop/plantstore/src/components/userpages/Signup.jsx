@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 
+
+
 export default function Signup() {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -27,12 +29,12 @@ export default function Signup() {
     setLoading(false);
   }
   return (
-    <div className="auth-container">
-      <div className="auth-card-content">
-        <h2>Sign Up</h2>
+    <div className="sign-up-container">
+      <div className="sign-up-content">
+        <h2 className="sign-up-title">Sign up</h2>
 
         {error && <p className="alert">{error}</p>}
-        <form className="auth-form" onSubmit={handleSubmit}>
+        <form className="sign-up-form" onSubmit={handleSubmit}>
           <label htmlFor="email">Email</label>
           <input type="text" id="email" ref={emailRef} required />
           <label htmlFor="password">Password</label>
@@ -45,14 +47,15 @@ export default function Signup() {
             required
           />
 
-          <button className="button" disabled={loading} type="submit">
+          <button className="button sign-up-button" disabled={loading} type="submit">
             Sign Up
           </button>
         </form>
-        <div className="auth-card-redirect">
+        <div className="auth-redirect">
           Already have an account? <Link to="/login">Log in</Link>
         </div>
       </div>
+      <img src="../assets/images/pexels-cottonbro-4505458.jpg" alt="room with plant"/>
     </div>
   );
 }

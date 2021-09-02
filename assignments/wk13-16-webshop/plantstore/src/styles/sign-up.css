@@ -1,0 +1,51 @@
+.sign-up-container {
+    margin-left: 20vw;
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+}
+
+.sign-up-content {
+    flex: 2 1 0px;
+}
+
+.sign-up-container img {
+    height: 100%;
+    flex: 1 1 0px;
+}
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+
+.sign-up-content{
+    padding: 12px 44px;
+}
+
+.sign-up-title {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.sign-up-container label {
+    margin-top: 5px;
+}
+
+.sign-up-container input {
+    border: none;
+    border-bottom: var(--accent) 1px solid;
+    outline: none;
+    padding-top: 14px;
+  }
+
+.alert {
+  font-weight: 800;
+}
+
+
+
+
+
+

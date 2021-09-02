@@ -6,7 +6,7 @@ export default function PlantsOverview() {
 
 
     return (
-        <div>
+        <div className="plants-overview">
             <Products category="plants" />
         </div>
     )

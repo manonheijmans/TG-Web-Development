@@ -11,6 +11,7 @@ const INITIAL_STATE = {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   
         price: 15,
+        featured: false,
         details: {
             height: 50,
             width: 10,
@@ -49,6 +50,7 @@ const INITIAL_STATE = {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   
         price: 15,
+        featured: false,
         details: {
           height: 50,
           width: 10,
@@ -88,6 +90,7 @@ const INITIAL_STATE = {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   
         price: 25,
+        featured: true,
         details: {
           height: 50,
           width: 10,
@@ -126,6 +129,7 @@ const INITIAL_STATE = {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   
         price: 15,
+        featured: false,
         details: {
           height: 50,
           width: 20,
@@ -164,6 +168,7 @@ const INITIAL_STATE = {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   
         price: 10,
+        featured: false,
         details: {
           height: 50,
           width: 5,
@@ -202,6 +207,7 @@ const INITIAL_STATE = {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   
         price: 10,
+        featured: true,
         details: {
           height: 50,
           width: 10,
@@ -227,21 +233,6 @@ const INITIAL_STATE = {
             },
           ]
         }
-      
-
-
-
-
-
-
-
-    
-
-
-
-
-
-   
   },
  
 
@@ -254,6 +245,7 @@ const INITIAL_STATE = {
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 
     price: 5,
+    featured: false,
     details: {
       height: 50,
       width: 10,
@@ -324,6 +316,7 @@ const INITIAL_STATE = {
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 
     price: 5,
+    featured: false,
     details: {
       height: 50,
       width: 10,
@@ -366,6 +359,7 @@ const INITIAL_STATE = {
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 
     price: 5,
+    featured: false,
     details: {
       height: 50,
       width: 10,
@@ -397,6 +391,7 @@ const INITIAL_STATE = {
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 
     price: 15,
+    featured: false,
     details: {
       height: 50,
       width: 10,
@@ -422,12 +417,13 @@ const INITIAL_STATE = {
   {
     id: 33,
     category: "accessoires",
-    title: "Growing Lamp",
+    title: "Plant animals",
     caption:
-      "Koop deze.",
+      "Maar deze echt.",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 
     price: 5,
+    featured: true,
     details: {
       height: 50,
       width: 10,

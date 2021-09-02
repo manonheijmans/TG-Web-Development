@@ -5,7 +5,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-
+import { ModalContainer, ModalRoute } from 'react-router-modal';
 import './styles/app.css'
 
 import { connect } from "react-redux";
@@ -37,33 +37,34 @@ import Test from "./components/Test";
 
 
 
-function App({current}) {
+function App({ current }) {
   return (
     <Router>
       <div className="app">
-        <Navbar />
-        <AuthProvider>
-        <Switch>
-          <Route path="/test" component={Test} />
-          <Route exact path="/" component={Homepage} />
-          <PrivateRoute exact path="/dashboard" component={Dashboard} />
-          <PrivateRoute path="/update-profile" component={UpdateProfile} />
-          <Route path="/signup" component={Signup} />
-          <Route path="/login" component={Login} />
-          <Route path="/forgot-password" component={ForgotPassword} />
-          {/* <Route exact path="/products" component={ProductOverview} /> */}
-          <Route path="/plants" component={PlantsOverview} />
-          <Route path="/driedflowers" component={DriedFlowersOverview} />
-          <Route path="/accessoires" component={AccessoiresOverview} />
 
-          <Route exact path="/cart" component={Cart} />
-          {!current ? (
-            <Redirect to="/" />
-          ) : (
-            <Route exact path="/product/:id" component={ProductDetails} />
-          )}
-        </Switch>
-      </AuthProvider>
+        <AuthProvider>
+          <Navbar />
+          <Switch>
+            <Route path="/test" component={Test} />
+            <Route exact path="/" component={Homepage} />
+            <PrivateRoute exact path="/dashboard" component={Dashboard} />
+            <PrivateRoute path="/update-profile" component={UpdateProfile} />
+            <Route path="/signup" component={Signup} />
+            <ModalRoute path="/login" component={Login} />
+            <ModalRoute path="/password-reset" component={ForgotPassword} />
+            {/* <Route exact path="/products" component={ProductOverview} /> */}
+            <Route path="/plants" component={PlantsOverview} />
+            <Route path="/driedflowers" component={DriedFlowersOverview} />
+            <Route path="/accessoires" component={AccessoiresOverview} />
+            <Route exact path="/cart" component={Cart} />
+            {!current ? (
+              <Redirect to="/" />
+            ) : (
+              <Route exact path="/product/:id" component={ProductDetails} />
+            )}
+          </Switch>
+          <ModalContainer />
+        </AuthProvider>
       </div>
     </Router>
   );

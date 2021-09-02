@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faUser, faSeedling, faTruck, faSun } from '@fortawesome/free-solid-svg-icons'
-import Modal from "./Modal";
+// import Modal from "./Modal";
 
 
 import { connect } from "react-redux";
@@ -20,12 +20,12 @@ const Navbar = ({ cart }) => {
   }, [cart, cartCount]);
 
 
-  
-  const [isModalOpen, setModalIsOpen] = useState(false);
 
-	const toggleModal = () => {
-		setModalIsOpen(!isModalOpen);
-	};
+  // const [isModalOpen, setModalIsOpen] = useState(false);
+
+  // const toggleModal = () => {
+  //   setModalIsOpen(!isModalOpen);
+  // };
 
 
 
@@ -49,11 +49,11 @@ const Navbar = ({ cart }) => {
 
 
 
-          {isModalOpen && <Modal onRequestClose={toggleModal} />}
-			  <button onClick={toggleModal} type="button">
-				Show the modal
-			</button>
-          {/* <li><Link to="/dashboard"><FontAwesomeIcon icon={faUser} /></Link></li> */}
+          {/* {isModalOpen && <Modal onRequestClose={toggleModal} />}
+          <button onClick={toggleModal} type="button">
+            Show the modal
+          </button> */}
+          <li><Link to="/dashboard"><FontAwesomeIcon icon={faUser} /></Link></li>
         </ul>
       </div>
 

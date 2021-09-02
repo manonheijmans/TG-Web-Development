@@ -3,6 +3,7 @@ import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 
 export default function Login({ onRequestClose }) {
+  
   const emailRef = useRef();
   const passwordRef = useRef();
   const { login } = useAuth();
@@ -10,7 +11,7 @@ export default function Login({ onRequestClose }) {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
-
+console.log(useAuth())
 
   // used to remove error message about memory leak
   useEffect(() => {
@@ -36,10 +37,10 @@ export default function Login({ onRequestClose }) {
 
   return (
     <div className="auth-container">
+      <Link to="/"><span className="close"></span></Link>
+
       <div className="auth-card-content">
-        <button className="close-button" onClick={onRequestClose}><span className="close"></span></button>
-        
-        <h2>Log In</h2>
+        <h2 className="auth-card-title">Log In</h2>
         {error && <p className="alert">{error}</p>}
         <form className="auth-form" onSubmit={handleSubmit}>
 
@@ -48,8 +49,8 @@ export default function Login({ onRequestClose }) {
        
           <label htmlFor="password">Password</label>
           <input type="password" id="password" ref={passwordRef} required />
-          <div className="forgot-password">
-          <Link to="/forgot-password">Forgot Password?</Link>
+          <div className="auth-redirect">
+           <Link to="/password-reset">Forgot Password?</Link>
         </div>
         
           <button className="button" disabled={loading} type="submit">
@@ -58,7 +59,7 @@ export default function Login({ onRequestClose }) {
         </form>
         
 
-        <div className="auth-card-redirect">
+        <div className="auth-sign-up-link">
           Need an account? <Link to="/signup">Sign Up</Link>
         </div>
       </div>

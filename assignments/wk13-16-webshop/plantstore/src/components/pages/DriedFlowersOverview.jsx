@@ -6,7 +6,7 @@ export default function DriedFlowersOverview() {
 
 
     return (
-        <div>
+        <div className="driedflowers-overview">
             <Products category="driedflowers" />
         </div>
     )

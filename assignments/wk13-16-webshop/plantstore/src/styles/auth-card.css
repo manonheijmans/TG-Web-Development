@@ -17,8 +17,7 @@ a:hover, a:active {
   }
 
 .auth-container{
-    max-width: 400px;
-    margin: 25vh auto;
+    width: 400px;
     border-radius: 8px;
     background-color: white;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
@@ -28,8 +27,10 @@ a:hover, a:active {
     padding: 12px 44px;
 }
 
-.auth-container h2 {
+
+.auth-card-title {
     text-align: center;
+    margin: 15px 0;
 }
 
 
@@ -44,30 +45,24 @@ a:hover, a:active {
     padding-top: 14px;
   }
 
+.alert {
+  font-weight: 800;
+}
 
-.button{
-  background: var(--primary);
-  border: none;
-  border-bottom: var(--accent) 3px solid;
-  cursor: pointer;
-  color: white;
-  font-family: "Raleway SemiBold", sans-serif;
-  height: 42px;
+.auth-container button {
   margin: 50px auto 10px auto;
-  transition: 0.25s;
-  width: 153px;
 }
 
-.auth-container button:hover {
-    background: var(--accent);
-}
 
-.forgot-password{
+
+
+
+.auth-redirect{
     text-align: right;
     font-size: 0.9rem;
 }
 
-.auth-card-redirect{
+.auth-sign-up-link{
     text-align: center;
     font-size: 0.9rem;
 }
@@ -76,32 +71,37 @@ a:hover, a:active {
 .close-button{
         border: 0;
         color: white;
-        background-color: white;
         font-family: system-ui, sans-serif;
-        text-decoration: none;
-      
+        text-decoration: none;      
 }
 
 .close {
     position: absolute;
+    top: 10px;
+    right: 5px;
     width: 32px;
     height: 32px;
-    opacity: 0.3;
+    opacity: 0.5;
   }
-  .close:hover {
+
+  .close-button:hover .close {
     opacity: 1;
   }
+
+
   .close:before, .close:after {
     position: absolute;
     left: 15px;
     content: ' ';
-    height: 33px;
-    width: 2px;
+    height: 20px;
+    width: 1px;
     background-color: #333;
   }
+
   .close:before {
     transform: rotate(45deg);
   }
+
   .close:after {
     transform: rotate(-45deg);
   }

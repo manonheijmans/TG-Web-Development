@@ -6,7 +6,7 @@ export default function AccessoiresOverview() {
 
 
     return (
-        <div>
+        <div className="accessoires-overview">
             <Products category="accessoires" />
         </div>
     )

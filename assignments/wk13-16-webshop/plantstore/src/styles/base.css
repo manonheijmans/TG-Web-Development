@@ -1,4 +1,19 @@
 main {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+.button{
+    background: var(--primary);
+    border: none;
+    border-bottom: var(--accent) 3px solid;
+    cursor: pointer;
+    color: white;
+    height: 42px;
+    transition: 0.25s;
+    width: 153px;
+  }
+
+  .button:hover {
+    background: var(--accent);
 }
