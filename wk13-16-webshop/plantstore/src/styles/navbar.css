@@ -1,0 +1,62 @@
+.navbar {
+    padding: 0 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary);
+
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;  
+    list-style: none;
+    padding: 0px;
+  
+}
+
+.navbar ul li {
+    text-decoration: none;
+    padding: 5px;
+    height: 100%;
+}
+
+
+
+.main-nav{
+    align-items: center;
+}
+
+.logo-container{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {width: 40px;
+height: 40px;
+margin: 10px;}
+
+.nav-icons {
+    color: rgba(0,0,0,1);
+}
+
+.nav-icons:hover{
+    color: rgba(0,0,0,0.6);
+}
+
+.shop-info {
+    height: 50px;
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.shop-info p{
+    flex: 1 1 0px;
+    text-align: center;
+
+}
