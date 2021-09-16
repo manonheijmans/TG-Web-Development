@@ -32,27 +32,22 @@ const Navbar = ({ cart }) => {
   return (
     <div className="navbar-container">
       <div className="navbar">
-        <ul className="main-nav">
-          <li><Link to="/">
+        
+
+          <Link to="/">
             <div className="logo-container">
               <img className="logo" src="../assets/images/logo.png" alt="logo" />
               <p>The Greenery</p>
             </div>
-          </Link></li>
-          {/* <li><Link to="/products">All Products</Link></li> */}
+          </Link>
+
+          <ul className="main-nav">
           <li><Link to="/plants">Plants</Link></li>
           <li><Link to="/driedflowers">Dried Flowers</Link></li>
           <li><Link to="/accessoires">Accessoires</Link></li>
         </ul>
         <ul className="user-nav">
           <li><Link to="/cart"><FontAwesomeIcon className="nav-icons" icon={faShoppingCart} /> {cartCount}</Link></li>
-
-
-
-          {/* {isModalOpen && <Modal onRequestClose={toggleModal} />}
-          <button onClick={toggleModal} type="button">
-            Show the modal
-          </button> */}
           <li><Link to="/dashboard"><FontAwesomeIcon className="nav-icons" icon={faUser} /></Link></li>
         </ul>
       </div>

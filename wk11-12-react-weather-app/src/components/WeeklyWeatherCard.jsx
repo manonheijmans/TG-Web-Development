@@ -1,3 +1,7 @@
+
+
+
+
 import React, { useState, useEffect } from 'react';
 import weathercardbackground from '../images/weathercardbackground.png'
 import IconConverter from './tools/IconConverter'
@@ -9,7 +13,7 @@ export default function WeeklyWeatherCard({ lat, lon }) {
 
   useEffect(() => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&appid=bd2eba57d16153bcc8d30de6e03da549&units=metric`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly&appid=${process.env.REACT_APP_API_KEY}&units=metric`
     )
       .then((res) => res.json())
       .then((result) => {
@@ -31,7 +35,7 @@ export default function WeeklyWeatherCard({ lat, lon }) {
     const dailyArray = weeklyData.daily
 
   return (
-    <div className="weekly-weather-card">
+    <div className="weekly-weather-card weather-card-back">
       {typeof weeklyData.daily != "undefined" ? (
 
         <div>
@@ -129,3 +133,5 @@ export default function WeeklyWeatherCard({ lat, lon }) {
 // }
 
          
+
+
