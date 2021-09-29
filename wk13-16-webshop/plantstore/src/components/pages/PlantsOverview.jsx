@@ -6,8 +6,8 @@ export default function PlantsOverview() {
 
 
     return (
-        <div className="plants-overview">
-            <Products category="plants" />
+        <div className="plants-overview page-container">
+            <Products category="plants" includeDetails="true" />
         </div>
     )
 }

@@ -21,7 +21,7 @@ export default function Dashboard() {
   return (
     <>
     
-        <div className="user-container">
+        <div className="user-container page-container">
           <h2>Profile</h2>
           {error && <p className="alert">{error}</p>}
           <strong>Email:</strong> {currentUser.email}

@@ -90,7 +90,7 @@ const INITIAL_STATE = {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   
         price: 25,
-        featured: true,
+        featured: false,
         details: {
           height: 50,
           width: 10,
@@ -245,7 +245,7 @@ const INITIAL_STATE = {
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 
     price: 5,
-    featured: false,
+    featured: true,
     details: {
       height: 50,
       width: 10,

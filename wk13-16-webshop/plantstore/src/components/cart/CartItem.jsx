@@ -27,12 +27,12 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
       />
       <div className="cart-item-details">
         <p className="cart-item-title">{item.title}</p>
-        <p className="cart-item-details">{item.caption}</p>
+        {/* <p className="cart-item-details">{item.caption}</p> */}
         <p className="cart-item-details-price">€ {item.price}</p>
       </div>
-      <div className="cart-items-actions">
+      <div className="cart-item-actions">
         <div className="cart-item-qty">
-          <label htmlFor="qty">Qty</label>
+          <label htmlFor="qty">Qty:</label>
           <input
             min="1"
             type="number"
@@ -42,7 +42,7 @@ const CartItem = ({ item, adjustQty, removeFromCart }) => {
             onChange={onChangeHandler}
           />
         </div>
-        <button
+        <button className="trash-button"
           onClick={() => removeFromCart(item.id)}
         >
          

@@ -1,11 +1,4 @@
       
-      // werkt vooralsnog alleen vooruit. hoe voeg ik de laatste functionaliteit toe? (switch?)
-      // 
-      //waar ik nog meer naar kan kijken: 
-      // automatiseren van creëren en toevoegen answers en bijbehorende elementen / event listeners (loop of forEach?)
-      // insert HTML in een functie?     
-
-
 
       // variables ===========================================================================
       

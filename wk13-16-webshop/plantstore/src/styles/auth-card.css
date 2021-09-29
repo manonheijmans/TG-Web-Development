@@ -1,14 +1,4 @@
-a {
-    text-decoration: none;
-}
 
-a:visited { 
-    text-decoration: none; color:black; 
-}
-
-a:hover, a:active { 
-    text-decoration: none; color:black 
-}
 
 .auth-form {
     align-items: left;
@@ -53,10 +43,6 @@ a:hover, a:active {
   margin: 50px auto 10px auto;
 }
 
-
-
-
-
 .auth-redirect{
     text-align: right;
     font-size: 0.9rem;
@@ -66,7 +52,6 @@ a:hover, a:active {
     text-align: center;
     font-size: 0.9rem;
 }
-
 
 .close-button{
         border: 0;

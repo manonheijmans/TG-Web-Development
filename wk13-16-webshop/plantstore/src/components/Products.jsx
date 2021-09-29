@@ -1,19 +1,10 @@
 import React from 'react';
 import { connect } from "react-redux";
-import Product from "./ProductCard";
+import ProductCard from "./ProductCard";
 
 
-const Products = ({ products, category }) => {
+const Products = ({ products, category, includeDetails }) => {
 
-  // const filteredArray = products.filter(function (product) {
-  //   return product.details.position === "sunny"
-  // });
-
-  // console.log(filteredArray)
-
-
-
-// const filter = true
 
   return (
 
@@ -21,7 +12,7 @@ const Products = ({ products, category }) => {
       {products.map((product) => {
       if(product.category === category) {
         return (
-          <Product key={product.id} product={product} />
+          <ProductCard key={product.id} product={product} includeDetails={includeDetails}/>
         )
       }})}
     </div>

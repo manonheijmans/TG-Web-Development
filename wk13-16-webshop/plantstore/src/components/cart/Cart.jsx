@@ -22,9 +22,10 @@ const Cart = ({ cart }) => {
   }, [cart, totalPrice, totalItems, setTotalPrice, setTotalItems]);
 
   return (
-    <div className="cart">
+    <div className="cart-container page-container">
       <h2>Shopping Cart</h2>
-      <div className="cart-item">
+      
+      <div className="cart-items">
         {cart.map((item) => (
           <CartItem key={item.id} item={item} />
         ))}
@@ -35,7 +36,7 @@ const Cart = ({ cart }) => {
           <span>TOTAL: ({totalItems} items)</span>
           <span>€{totalPrice}</span>
         </div>
-        <button className="button">
+        <button className="button checkout-button">
           Proceed To Checkout
         </button>
       </div>

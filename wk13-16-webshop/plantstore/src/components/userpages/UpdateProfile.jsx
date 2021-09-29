@@ -41,46 +41,44 @@ export default function UpdateProfile() {
   }
 
   return (
-    <>
-      <div className="auth-card">
-        <div className="auth-card-content"> 
-        <h2>Update Profile</h2>  
-        {error && <p className="alert">{error}</p>}
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="email">email</label>
-          <input
-            type="email"
-            id="email"
-            ref={emailRef}
-            required
-            defaultValue={currentUser.email}
-          />
-          <label htmlFor="password">password</label>
-          <input
-            type="text"
-            id="password"
-            ref={passwordRef}
-            required
-            placeholder="Leave blank to keep the same"
-          />
-          <label htmlFor="password-confirm">password</label>
-          <input
-            type="text"
-            id="password-confirm"
-            ref={passwordConfirmRef}
-            required
-          />
+      <div className="auth-card page-container">
+        <div className="auth-card-content update-profile-content">
+          <h2>Update Profile</h2>
+          {error && <p className="alert">{error}</p>}
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="email">email</label>
+            <input
+              type="email"
+              id="email"
+              ref={emailRef}
+              required
+              defaultValue={currentUser.email}
+            />
+            <label htmlFor="password">password</label>
+            <input
+              type="text"
+              id="password"
+              ref={passwordRef}
+              required
+              placeholder=""
+            />
+            <label htmlFor="password-confirm">confirm password</label>
+            <input
+              type="text"
+              id="password-confirm"
+              ref={passwordConfirmRef}
+              required
+            />
 
-         
-          <button className="button" disabled={loading} type="submit">
-            Update
-          </button>
-        </form>
+
+            <button className="button" disabled={loading} type="submit">
+              Update
+            </button>
+          </form>
+          <div>
+          <Link to="/">Cancel</Link>
+        </div>
+        </div>  
       </div>
-      <div>
-        <Link to="/">Cancel</Link>
-      </div>
-      </div>
-    </>
   );
 }

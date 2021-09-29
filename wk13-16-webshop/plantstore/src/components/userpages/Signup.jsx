@@ -29,7 +29,7 @@ export default function Signup() {
     setLoading(false);
   }
   return (
-    <div className="sign-up-container">
+    <div className="sign-up-container page-container">
       <div className="sign-up-content">
         <h2 className="sign-up-title">Sign up</h2>
 

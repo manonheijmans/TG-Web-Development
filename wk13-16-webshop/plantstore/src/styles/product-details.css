@@ -4,6 +4,8 @@
     justify-content: center;
 }
 
+
+
 .product-details {
     width: 50%;
     padding: 50px;
@@ -21,5 +23,28 @@
 }
 
 .product-details-info img{
-    width: 75px;
+    width: 70px;
 }
+
+
+@media (max-width: 850px) {
+    .product-details-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-details {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+   
+
+    .product-details-info img{
+        width: 50px;
+    }
+}
+
+

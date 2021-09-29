@@ -31,23 +31,26 @@ import ForgotPassword from "./components/userpages/ForgotPassword"
 import UpdateProfile from "./components/userpages/UpdateProfile"
 
 import Navbar from "./components/Navbar";
-// import Header from "./components/Header";
 
 
-import Test from "./components/Test";
+
+ 
+
+
 
 
 
 
 function App({ current }) {
   return (
+    <AuthProvider>
     <Router>
       <div className="app">
 
-        <AuthProvider>
+        
          <Navbar />
+        
           <Switch>
-            <Route path="/test" component={Test} />
             <Route exact path="/" component={Homepage} />
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
             <PrivateRoute path="/update-profile" component={UpdateProfile} />
@@ -66,9 +69,10 @@ function App({ current }) {
             )}
           </Switch>
           <ModalContainer />
-        </AuthProvider>
+        
       </div>
     </Router>
+    </AuthProvider>
   );
 }
 

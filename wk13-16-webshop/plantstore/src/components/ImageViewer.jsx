@@ -32,7 +32,7 @@ function thumbnailViewer() {
                 ))}
             </div>
         
-            <img className="main" src={current.images.details[0].url} alt="product"/>
+            <img className="main-image" src={current.images.details[0].url} alt="product"/>
           
         </div>
     )

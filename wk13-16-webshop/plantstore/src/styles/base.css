@@ -3,6 +3,30 @@ main {
     margin: 0 auto;
 }
 
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: var(--primary) ; 
+}
+
+a:active {
+  color: var(--primary) ; 
+
+}
+
+.page-container {
+  margin-top: 130px;
+}
+
+
+
 .button{
     background: var(--primary);
     border: none;
@@ -16,4 +40,10 @@ main {
 
   .button:hover {
     background: var(--accent);
+}
+
+@media only screen and (max-width: 850px) {
+  .page-container{
+    margin-top: 60px
+  }
 }
