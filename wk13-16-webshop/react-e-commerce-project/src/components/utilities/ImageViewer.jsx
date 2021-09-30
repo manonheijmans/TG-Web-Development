@@ -11,7 +11,7 @@ useEffect(() => {
 function thumbnailViewer() {
     const thumbnails = document.querySelector(".thumbnails")
     const imgs = thumbnails.getElementsByTagName("img")
-    const main = document.querySelector(".main")
+    const main = document.querySelector(".main-image")
     console.log(main)
     
     for(let i=0;i<imgs.length;i++){

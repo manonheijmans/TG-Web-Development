@@ -46,7 +46,7 @@ const INITIAL_STATE = {
         category: "plants",
         title: "Philodendron Scandens",
         caption:
-          "Deze moet je hebben.",
+          "Kijk hoe mooi.",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   
         price: 15,
@@ -164,7 +164,7 @@ const INITIAL_STATE = {
         category: "plants",
         title: "Cactus Trio",
         caption:
-          "Heel cute zijn deze.",
+          "Leuk cadeautje voor je nichtje",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   
         price: 10,
@@ -241,7 +241,7 @@ const INITIAL_STATE = {
     category: "driedflowers",
     title: "Eryngium",
     caption:
-      "Koop deze.",
+      "Koop deze ook.",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 
     price: 5,
@@ -277,7 +277,7 @@ const INITIAL_STATE = {
     category: "driedflowers",
     title: "Moby Dick",
     caption:
-      "Koop deze.",
+      "Leuk voor je moeder.",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 
     price: 5,
@@ -355,10 +355,10 @@ const INITIAL_STATE = {
     category: "accessoires",
     title: "Growing Lamp",
     caption:
-      "Koop deze.",
+      "Heel handig voor je mini stekjes.",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 
-    price: 5,
+    price: 10,
     featured: false,
     details: {
       height: 50,
@@ -387,7 +387,7 @@ const INITIAL_STATE = {
     category: "accessoires",
     title: "Watering Can",
     caption:
-      "Koop deze.",
+      "Planten hebben ook water nodig.",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 
     price: 15,
@@ -417,9 +417,9 @@ const INITIAL_STATE = {
   {
     id: 33,
     category: "accessoires",
-    title: "Plant animals",
+    title: "Plant Animals",
     caption:
-      "Maar deze echt.",
+      "Geef wat bling aan je plant.",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 
     price: 5,

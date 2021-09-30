@@ -4,7 +4,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { addToCart } from "../../redux/Shopping/shopping-actions";
 
-import ImageViewer from "../ImageViewer";
+import ImageViewer from "../utilities/ImageViewer";
 
 const ProductDetails = ({ current, addToCart }) => {
   console.log(current.id)

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux";
-import ProductCard from "./ProductCard";
+import ProductCard from "../ProductCard";
 
 
 const Products = ({ products, category, includeDetails }) => {
