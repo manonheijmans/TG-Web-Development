@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/live-preview-react-e-commerce-app/static/css/main.dc6bc3ac.chunk.css",
+    "main.js": "/live-preview-react-e-commerce-app/static/js/main.e5645838.chunk.js",
+    "main.js.map": "/live-preview-react-e-commerce-app/static/js/main.e5645838.chunk.js.map",
+    "runtime-main.js": "/live-preview-react-e-commerce-app/static/js/runtime-main.7ecaf6d8.js",
+    "runtime-main.js.map": "/live-preview-react-e-commerce-app/static/js/runtime-main.7ecaf6d8.js.map",
+    "static/js/2.d9e4d6e5.chunk.js": "/live-preview-react-e-commerce-app/static/js/2.d9e4d6e5.chunk.js",
+    "static/js/2.d9e4d6e5.chunk.js.map": "/live-preview-react-e-commerce-app/static/js/2.d9e4d6e5.chunk.js.map",
+    "index.html": "/live-preview-react-e-commerce-app/index.html",
+    "precache-manifest.a9642677dcb1ca410ce610f050ee2aba.js": "/live-preview-react-e-commerce-app/precache-manifest.a9642677dcb1ca410ce610f050ee2aba.js",
+    "service-worker.js": "/live-preview-react-e-commerce-app/service-worker.js",
+    "static/css/main.dc6bc3ac.chunk.css.map": "/live-preview-react-e-commerce-app/static/css/main.dc6bc3ac.chunk.css.map",
+    "static/js/2.d9e4d6e5.chunk.js.LICENSE.txt": "/live-preview-react-e-commerce-app/static/js/2.d9e4d6e5.chunk.js.LICENSE.txt",
+    "static/media/app.css": "/live-preview-react-e-commerce-app/static/media/YoungSerif-Regular.bde5ee94.otf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7ecaf6d8.js",
+    "static/js/2.d9e4d6e5.chunk.js",
+    "static/css/main.dc6bc3ac.chunk.css",
+    "static/js/main.e5645838.chunk.js"
+  ]
+}
