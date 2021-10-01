@@ -55,8 +55,8 @@ function App({ current }) {
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
             <PrivateRoute path="/update-profile" component={UpdateProfile} />
             <Route path="/signup" component={Signup} />
-            <ModalRoute path="/login" component={Login} />
-            <ModalRoute path="/password-reset" component={ForgotPassword} />
+            <Route path="/login" component={Login} />
+            <Route path="/password-reset" component={ForgotPassword} />
             {/* <Route exact path="/products" component={ProductOverview} /> */}
             <Route path="/plants" component={PlantsOverview} />
             <Route path="/driedflowers" component={DriedFlowersOverview} />

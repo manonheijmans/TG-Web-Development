@@ -36,7 +36,7 @@ console.log(useAuth())
   }
 
   return (
-    <div className="auth-container">
+    <div className="auth-container page-container">
       <Link to="/"><span className="close"></span></Link>
 
       <div className="auth-card-content">

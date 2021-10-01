@@ -25,11 +25,13 @@
     position: relative;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 .project-card-image-container  img{
     width: 90vw;
     display: block;
+    
 }
 
 .overlay {
@@ -103,6 +105,11 @@
 .project-card-image-container {
     position: relative;
     width: 50vw;
+}
+
+.project-card-image-container img {
+  height: 600px;
+  object-fit: cover;
 }
 //card positioning
 // ------------------------------------------

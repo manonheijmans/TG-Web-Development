@@ -11,9 +11,9 @@ apis naar hier verplaatsen wel in losse component
 
 function App() {
   return (
-      <div className="App">
-        <h1 className="title">React Weather App</h1>
-      <WeatherOverview/>
+    <div className="App">
+      <h1 className="title">React Weather App</h1>
+      <WeatherOverview />
     </div>
   )
 }

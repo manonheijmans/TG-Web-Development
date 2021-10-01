@@ -129,7 +129,11 @@
     }
 
     
-    .spotlight-images img:hover {
+    .spotlight-images-main:hover img {
+        transform: scale(1.1); 
+    }
+    
+    .spotlight-images-secondary:hover img {
         transform: scale(1.1);
       
     }

@@ -10,51 +10,46 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/scripts.js" defer></script>
   <script src="https://kit.fontawesome.com/3ef49ce8f5.js" crossorigin="anonymous"></script>
-
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="scss/main.css" />
   <title>Portfolio</title>
-
-
 </head>
 
 <body>
-  <header>
-    <nav>
+  <header class="header-container">
+    <nav class="nav-container">
       <div class="navbar-own-logo">
         <a href="#home"><img src="/images/navbar/MH.png" alt="logo"></a>
       </div>
-      <div class="navbar-hamburger-icon">
-        <div class="menu-icon">
-          <input class="menu-icon__checkbox" type="checkbox" />
-          <div>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      </div>
-      <ul class="navbar-icon-links">
-        <li><a href="https://github.com/manoninonam" target="_blank"><img src="/images/navbar/github-logo.png"
-              alt="github"></a></li>
-        <li><a href="https://www.linkedin.com/in/manon-heijmans/" target="_blank"><img
-              src="/images/navbar/linkedin-logo.png" alt="linkedIn"></a></li>
-      </ul>
       <ul class="navbar-main-links">
         <li><a href="#projects">Projects</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <ul class="navbar-icon-links">
+        <li><a href="https://github.com/manoninonam" target="_blank"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/manon-heijmans/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        <li class="navbar-hamburger-icon"><span style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="bi bi-list"></i></span> </li>
+      </ul>
+      <div id="myNav" class="nav-overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="#projects" onclick="closeNav()">Projects</a>
+          <a href="#about" onclick="closeNav()">About</a>
+          <a href="#contact" onclick="closeNav()">Contact</a>
+        </div>
+      </div>
     </nav>
   </header>
-
-
 
   <main>
     <section id="home" class="banner-container">
       <div class="banner-grid-container">
         <div class="banner-text-container">
           <h1>Manon <br>Heijmans // <br>
-          Web <br>Developer <br>
+            Web <br>Developer <br>
         </div>
         <div class="banner-carousel-container">
           <div id="carousel" class="carousel slide" data-bs-ride="carousel">
@@ -86,16 +81,17 @@
         <div class="project-card card1">
           <div class="background-block"></div>
           <div class="project-card-image-container">
-            <img src="/images/dummy.png" alt="dummy">
+            <img src="/images/projects/large-e-commerce.png" alt="dummy">
             <div class="overlay"></div>
           </div>
           <div class="slider">
             <div class="slider-text">
-              <p>Project Titel</p>
-              <p>May 27, 2021</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore odio, placeat itaque natus facere
-                incidunt magnam cupiditate id assumenda cum nihil quam obcaecati fugit porro? A est fugiat facilis esse?
+              <p>The Greenery</p>
+              <p>August, 2021</p>
+              <p>E-commerce project with login and shopping cart functionality made as part of my course at TechGrounds. Made with React, Redux and Firebase. 
               </p>
+              <a href="https://manoninonam.github.io/live-preview-react-e-commerce-app/#/">View project</a>
+              <a href="https://github.com/manoninonam/live-preview-react-e-commerce-app">View source code</a>
             </div>
             <div class="slider-accent"></div>
             <div class="border-accent"></div>
@@ -106,16 +102,17 @@
           <div class="background-block"></div>
           <div class="background-block"></div>
           <div class="project-card-image-container">
-            <img src="/images/dummy.png" alt="dummy">
+            <img src="/images/projects/Schermafbeelding 2021-10-01 om 11.57.10.png" alt="dummy">
             <div class="overlay"></div>
-          </div>
+          </div> 
           <div class="slider">
             <div class="slider-text">
-              <p>Project Titel</p>
-              <p>May 27, 2021</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore odio, placeat itaque natus facere
-                incidunt magnam cupiditate id assumenda cum nihil quam obcaecati fugit porro? A est fugiat facilis esse?
+              <p>Weather App</p>
+              <p>July, 2021</p>
+              <p>Small weather-app project in React using the OpenWeatherApp API. Made as part of my course at TechGrounds. 
               </p>
+              <a href="https://manoninonam.github.io/live-preview-react-weather-app/">View project</a>
+              <a href="https://github.com/manoninonam/live-preview-react-weather-app">View source code</a>
             </div>
             <div class="slider-accent"></div>
           </div>
@@ -195,12 +192,12 @@
             <div class="skills-bar js-bar"></div>
             <div class="skills-bar react-bar"></div>
             <div class="skills-bar sass-bar"></div>
-          </div>   
+          </div>
         </div>
         <div class="about-image-and-skills"></div>
         <img class="profile-picture" src="/images/about/profilepicture-greyscale.png">
       </div>
-        
+
       </div>
     </section>
 
@@ -208,7 +205,6 @@
       <h2>Contact </h2>
       <div class="contact-info">
         <p>mail: manon.heijmans@gmail.com</p>
-        <p>tel: +31 6 53 93 41 72</p>
         <p>Nijmegen</p>
       </div>
       <div class="contact-socials">
@@ -222,6 +218,7 @@
 
 
     </section>
+    
   </main>
 
 
@@ -229,7 +226,7 @@
 
 
 
-
+ 
 
 </body>
 

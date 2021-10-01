@@ -32,10 +32,7 @@ function thumbnailViewer() {
                     <img src={`${image.url}`} alt="product"/>
                 ))}
             </div>
-        
-            <img src="../assets/images/logo.png"/>
-            <img className="main-image" src={current.images.details[0].url} alt="product"/>
-          
+            <img className="main-image" src={current.images.details[0].url} alt="product"/>   
         </div>
     )
 }
