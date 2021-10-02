@@ -5,7 +5,6 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import { ModalContainer, ModalRoute } from 'react-router-modal';
 import './styles/app.css'
 
 import { connect } from "react-redux";
@@ -31,6 +30,7 @@ import ForgotPassword from "./components/userpages/ForgotPassword"
 import UpdateProfile from "./components/userpages/UpdateProfile"
 
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 
 
@@ -68,10 +68,11 @@ function App({ current }) {
               <Route exact path="/product/:id" component={ProductDetails} />
             )}
           </Switch>
-          <ModalContainer />
+          
         
       </div>
     </Router>
+      <Footer/>
     </AuthProvider>
   );
 }
